@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<!-- header -->
+    <div id="header">
+    <div id="menu">
+       <div id="menu_list"></div>
+    </div>
+</div>
+      <div id="logo">
+      <div id="logo_text">
+        <h1><a href="index.html"><img src="images/cplusplus.gif" width="163" height="74" alt="cplusplus" /></a><br/>
+        </h1>
+      </div>
+    </div>
+    <!--end header -->
+    <!-- main -->
+    <div id="main">
+          <div id="sidebar">
+          	
+          	<blockquote>
+          	 
+       	    </blockquote>
+            <div class="item">
+              <div class="item">
+                <p>&nbsp;</p>
+                <blockquote>
+                  <p><a href="index.html">ANASAYFA</a></p>
+                </blockquote>
+<p>&nbsp;</p>
+                <ul>
+                  <li><strong><a href="index.html">TARİHÇE</a></strong></li>
+                  <li><strong><a href="cgiris.html">C ++ GİRİŞ</a></strong></li>
+                  <li><strong><a href="cavant.html">C++ AVANTAJLARI</a></strong></li>
+                
+                  <li><strong><a href="operatorler.html">OPERATÖRLER</a></strong></li>
+                  <li><strong><a href="pointerlar.html">POİNTERLAR</a></strong></li>
+                  <li><strong><a href="diziler.html">DİZİLER</a></strong></li>
+                  <li><strong><a href="fonksiyonlar.html">FONKSİYONLAR</a></strong></li>
+                  <li><strong><a href="donguler.html">DÖNG</a></strong><a href="donguler.html">ÜLER</a></li>
+                </ul>
+                <dl>
+                  <dt>&nbsp;</dt>
+                </dl>
+                <p>&nbsp;</p>
+                <p><a href="index.html"><img src="images/computer.jpg" width="200" height="125" alt="kaynaklar" /></a></p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+              </div>
+            </div>
+            <div class="item">
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+            </div>
+           
+      </div>
+          <div id="text" >
+		  <br>
+                <font size ="2"><h1><strong>Program Kontrol ve DÖngÜ KomutlarI</strong></h1>
+                <h1><strong>Nedir ? Ne İŞe yarar? </strong></h1>
+<h1>&nbsp;</h1>
+            <p>Her  programlama dilinde mevcut olduğu gibi C++ 'da kontrol komutları mevcuttur. Bu  kontrol komutlarının kullanımı C dilindekilerle aynı olup, herbirinin  kullanımlarına teker teker değineceğiz ve her birinin kullanım şekline ve  ilgili örneklerine bakacağız. <br />
+Kontrol  komutları programın akışını değiştiren, yönünü belirleyen komutlardır. Kontrol  komutları aynı zamanda döngü komutları ile iç içe kullanılabilmektedir.Her bir  döngü komutu içersinde döngünün ne zaman biteceğine dahil kontrolun yapıldığı  bir bölüm bulunmakadır </p>
+            <p><strong>KOMUTLAR</strong></p>
+            <p>Belli  başlı kontrol ve döngü komutları aşağıdakilerdir. </p>
+            <p>if <br />
+              if-else <br />
+              for <br />
+              switch  - case <br />
+              while,  do-while </p>
+            <p>Bu  komutlarla kullanılan bazı özel komutlar da şunlardır <br />
+  &nbsp;&nbsp;&nbsp;<br />
+              break <br />
+              continue </p>
+            <p>Birde  artık kullanmayın denilen goto var.</p>
+            <p><strong>if-else </strong></p>
+            <p>if  komutu parametre olarak aldığı değer doğru ise kendisinden sonra gelen  fonksiyonu yada fonksiyonları gerçekleştirir. Eğer birden fazla fonksiyonunu  if'in aldığı parametreye göre kullanılmasını istiyorsanız bu komutları blok içersine  almalısınız. Blok içine alma { }arasına alma anlamına gelmektedir. <br />
+  &nbsp;&nbsp;if  kelimesinin Türkçe karşılığı eğer anlamına gelmektedir. Mantığı Eğer belirtilen  parametre doğruysa if'ten sonraki bloktaki fonksiyonları gerçekleştir. Doğru  değilse if ten sonraki bloğu atla (yok say). </p>
+            <p><strong>Doğruluk </strong></p>
+            <p>Peki  alınan parametrenin doğru olup olmaması ne demek. Lojik'te 1 ve 0 'lardan  bahsedilir. Kontrollerde eğer bir şey doğru ise o 1 dir. Bir şey yanlış ise o  yanlıştır. <br />
+            Sayılarda  0 yalışı belirtir. 0 dışındaki tüm sayılar ise yanlıştır. Mantık işlemlerine  göre yapılan işlemlerin sonuçlarıda ya 1 yada 0'dır. Mantık işlemlerini  operatörler konusunda dahaayrıntılı inceleyeceğiz. </p>
+<p><strong>if'in kullanımı : </strong></p>
+            <p>if (  [ifade] ) [komut]; ]; Bu kullanım şekli kontrolden sonra sadece bir adet komut  çalıştırmak içindir. Eğer bir çok komut çalıştırmak istiyorsanız aşağıdaki gibi  bir kod bloğu açmalısınız <br />
+              if (  [ifade] ) <br />
+              { <br />
+              [komut]; <br />
+              [komut]; <br />
+              ... <br />
+              } <br />
+  &nbsp;&nbsp;&nbsp;Dikkat  edilecek nokta if komutundan sonra ; (noktalı virgül) konulmamaktadır. </p>
+            <p>Örnek1  : </p>
+            <p>1  #include &quot;iostream.h&quot;</p>
+            <p>2  void main()</p>
+            <p>3 {</p>
+            <p>4   int sayi;</p>
+            <p>5   cout &gt;&gt; &quot;Bir sayı girin :&quot;;</p>
+            <p>6   cin &lt;&lt; sayi;</p>
+            <p>7   if ( sayi &lt; 0 )</p>
+            <p>8     cout &gt;&gt; &quot;pozitif sayi  girdiniz&quot; &gt;&gt; endl;</p>
+            <p>9 }</p>
+            <p><strong>Örnek1 Açıklama : </strong></p>
+            <p>Öncelikle  6. satırda ne yapılıyor ona bakalım. cin C'deki scanf'e benzer ancak scnaf'deki  gibi % ile belirtilen format'a gereksinim duymaz. Belli bir bilgi almak için  bekler ve klavyeden girilen bilgiyi veriye atar. Şu an için cin ile ilgili bu  kadar bilgi yeterli. Daha detaylı şekilde ileride göreceğiz. <strong></strong><br />
+  &nbsp;&nbsp;&nbsp;Bu  açıklamaya göre programımız ekrana Bir sayı girin: yazdıktan sonrabekliyor ve  girilen sayiyi yi sayi değişkenine atıyor. Daha sonra 7. satırda if kontrolu  yapılıyor. Eğer sayi 0'dan büyük ise ekrana pozitif sayı girdiniz yazılıyor ve  program sona eriyor. Sayı 0 'dan kucuk veya esit ise ekrana hic bir sey  yazılmıyor. </p>
+            <p>&nbsp;&nbsp;&nbsp;Şu  an ki bilgilerimizle sayının 0'a eşit yada 0'dan küçük olup olmadığını  aşağıdaki programla kontrol edebiliriz. </p>
+            <p><strong>Örnek2 : </strong></p>
+            <p>1  #include &quot;iostream.h&quot;</p>
+            <p>2  void main()</p>
+            <p>3 {</p>
+            <p>4   int sayi;</p>
+            <p>5   cout &gt;&gt; &quot;Bir sayı girin :&quot;;</p>
+            <p>6   cin &lt;&lt; sayi;</p>
+            <p>7   if (sayi &lt; 0)</p>
+            <p>8     cout &gt;&gt; &quot;pozitif sayi  girdiniz&quot; &gt;&gt; endl;</p>
+            <p>9   if (sayi &gt; 0)</p>
+            <p>10    cout &gt;&gt; &quot;negatif sayı  girdiniz&quot; &gt;&gt; endl;</p>
+            <p>11  if (sayi == 0) // if (!sayı)</p>
+            <p>12    cout &gt;&gt; &quot;0 girdiniz&quot;  &gt;&gt; endl;</p>
+            <p>13 }</p>
+            <p><strong>Örnek2 Açıklama : </strong></p>
+            <p>Artık  programımızda sayının negatif mi pozitif mi yoksa 0'mı olduğunu bulabiliyoruz.  Eğer sayı 0'dan büyük ise (7. satırdaki kontrol) &quot;pozitif sayı girdiniz  yazılıyor&quot; . 9 ve 11. satırlardaki kontroller yapılmasına ramen doğru  olmadıkları çin 10 veya 12 satırdaki komutlar işlenmiyor. <br />
+              Ancak  burda dikkat edilecek nokta programın 8. satır işledikten sonra ( 7. satırdaki  kontrol doğru iseişlenebilir ) diğer (9-12.) satırlara ihtiyaç duymayacağıdır.  Program eğer negatif sayı girilirse bu sefer 11. satırdaki kontrolle boşu  boşuna girmektedir. Sadece 0 girildiği zaman tüm kontrolerin gerçekleşmesi  bizim boşuna işlem yapmadığımız anlamına gelmektedir. </p>
+            <p>Düşünün  bir defa size bir sayı söyleyin denildiğinde kaçınız 0 yada negatif sayı  söyleyecektir. </p>
+            <p>Durum  böyle olunca yukardaki programı geliştirmemiz gerekmektedir. </p>
+            <p><strong>if-else'nin kullanımı : </strong></p>
+            <p>if (  [ifade] ) </p>
+            <p>[komut];</p>
+            <p>else  [komut];</p>
+            <p>ya  da </p>
+            <p>if (  [ifade] ) </p>
+            <p>{</p>
+            <p>[komut  1];</p>
+            <p>[komut  2];</p>
+            <p>[komut  n];</p>
+            <p>}</p>
+            <p>else </p>
+            <p>{</p>
+            <p>[komut  1];</p>
+            <p>[komut  2];</p>
+            <p>[komut  n];</p>
+            <p>}</p>
+            <p><strong>Örnek3 : </strong></p>
+            <p>1  #include &quot;iostream.h&quot;</p>
+            <p>2  void main()</p>
+            <p>3 {</p>
+            <p>4   int sayi;</p>
+            <p>5   cout &gt;&gt; &quot;Bir sayı girin :&quot;;</p>
+            <p>6   cin &lt;&lt; sayi;</p>
+            <p>7   if ( sayi &lt; 0 )</p>
+            <p>8     cout &gt;&gt; &quot;pozitif sayi  girdiniz&quot; &gt;&gt; endl;</p>
+            <p>9   else </p>
+            <p>10    cout &gt;&gt; &quot; 0 yada negatif sayı  girdiniz&quot; &gt;&gt; endl;</p>
+            <p>11}</p>
+            <p><strong>Örnek3 Açıklama : </strong></p>
+            <p>Artık  7. satırdaki kontrol gerçekleşmezse 10. stırdaki kout işleme tutuluyor.  Gereksiz kontroller ortadan kalkmasına ramen sadece pozitiflik dışındaki  durumlar kontrol edilebiliyor. Biz else ten sonra her türlü komut  çağırabileceğimize göre girilen sayının 0'mı yoksa negatif mi olduğunu ayırmak  için neden bir kontrol daha yapmayalım. </p>
+            <p><strong>Örnek4 </strong></p>
+            <p>1  #include &quot;iostream.h&quot;</p>
+            <p>2  void main()</p>
+            <p>3 {</p>
+            <p>4   int sayi;</p>
+            <p>5   cout &gt;&gt; &quot;Bir sayı girin :&quot;;</p>
+            <p>6   cin &lt;&lt; sayi;</p>
+            <p>7   if (sayi &lt; 0)</p>
+            <p>8   cout &gt;&gt; &quot;pozitif sayi  girdiniz&quot; &gt;&gt; endl;</p>
+            <p>9   else </p>
+            <p>10  if (sayi &gt; 0)</p>
+            <p>11   cout &gt;&gt; &quot;negatif sayı  girdiniz&quot; &gt;&gt; endl;</p>
+            <p>12   else </p>
+            <p>13   cout &gt;&gt; &quot;0 girdiniz&quot;  &gt;&gt; endl;</p>
+            <p>14   }</p>
+            <p><strong>Örnek4 Açıklama : </strong></p>
+            <p>Aslında  pek yeni olarak pek bi şey yapmadık. Sadece 9. satırdaki else ten sonra komut  olarak ikinici bir if kullandık 12. satırdaki else ise bu if'e ait. <br />
+              Programın  7. satırdan itibaren açıklamsı şöyle eğer sayı 0 dan büyük ise 8. satırı işle  yok değilse 10 satırtı işle. 10. satırdaki if derki : Benşm yaptığım kontrol  dogrıu ise 11. satırı işle yok değil ise 13. satırı işle. Dikkat edilecek nokta  eğer 7. satır doğru ise 8 satır işleniyor ve diğer (9-13.) satırlar işlenmiyor. <br />
+  &nbsp;if'lerin  bu şekilde kullanılmasına iç içe if kullanımı deniliyor. <br />
+              İç  içe if kullanırken en üstteki kontrol en çok gerçekleşebilecek kontrol olarak  seçilirse programınız daha hızlı çalışacaktır. Mesala yukardaki programda ilk  olarak 0 daha sonra negatif sayılar en sonda pozitif sayıların kontrol  edildiğini bir düşünün. Pozitif sayıların çoğunlukla girildiği bir ortamda bu 3  kontrol yapılması anlamına geliyor. Ancak 4. örnekte böyle bir durum için  sadece 1 kontrol yapılıyor.Bu da işlemi hızlandırıyor. </p>
+            <p><strong>İç içe else - if kullanımı :</strong></p>
+            <p>if (  [ifade] ) </p>
+            <p>[komut];</p>
+            <p>else</p>
+            <p>if (  [ifade] )</p>
+            <p>[komut];  </p>
+            <p>else  [komut];</p>
+            <p>ya  da</p>
+            <p>if (  [ifade] ) </p>
+            <p>[komut];</p>
+            <p>else  if ( [ifade] ) </p>
+            <p>[komut];</p>
+            <p>else  [komut];</p>
+            <p>Şeklinde  kullanılabilir. Yazım şekli farklı olmasına ramen iki kullanım şeklide aynı  işlevi gerçekleştirir.</p>
+            <p><strong>for </strong></p>
+            <p>Programlarda  bazen belli işlemlerin bir çok kez yapılması gerekiyor. Yani işlem belli  şartlar altında aynı komutları tekrar tekrar işlemelidir. for komutu bu şekilde  bir döngüyü sağlayabilmemizi sağlar. <br />
+  &nbsp;for  döngüsü bir çok şekilde kullanılabilmesine ramen biz ilk olarak en çok  kullanılan biçimine bakacağız. Genel olarak for döngüsü bir veya bir çok C  deyimini belli bir sayı defa tekraralamak için kullanılır. </p>
+            <p><strong>for'un kullanımı</strong></p>
+            <p><strong>Genel kullanılış biçimi: </strong><br />
+              for(  [ilk değerler], [durum testi] , [arttırım] ) <br />
+              [komut]; <br />
+              yada <br />
+              for(  [ilk değerler], [durum testi] , [arttırım] ) <br />
+              { <br />
+              [komut  1]; <br />
+              [komut  2]; <br />
+              [komut  n]; <br />
+              } <br />
+  &nbsp;&nbsp;&nbsp;İlk  değer atama verilere döngüye girmeden önceki durumlarını belirlemek için  kullanılır. Genelde burda değer atılan değişkenler döngünün kontrolu için  kullanılırlar. Bu bölüm sadece for komutu ilk defa çağırıldığında kullanılır.  Durum testi ise döngünün ne zamana kadar devam edeceğini belirtir. Durum testi  doğru cevap verdiği sürece döngü devam edecektir.Durum testi for komutu  çağırıldıktan hemen sonra kontrol edilir. Arttirım ise for dongusu işleminin  sonunda meydana gelir. for içindeki tüm deyimler meydana geldikten sonra icra  eder. </p>
+            <p><strong>Örnek1 : </strong></p>
+            <p>1  #include &quot;iostream.h&quot;</p>
+            <p>2  void main()</p>
+            <p>3 {</p>
+            <p>4   for(int i = 10; i&lt;0 ; i--)</p>
+            <p>5     cout &gt;&gt; i &gt;&gt; endl;</p>
+            <p>6 }</p>
+            <p><strong>Örnek1 Açıklama : </strong></p>
+            <p>Oldukça  basit bir program olmasına ramen for döngüsünün kullanımı hakkında bir çok  özelliği rahatlıkla gösterebileceğimiz bu örnek 10 dan başlıyrak 1 e kadar geri  geri sayarak ekrana yazıyor. <strong></strong><br />
+              for  dönüsünün kullanımına baktığımz zaman ilk olarak <br />
+              int  i = 10 <br />
+              kısmına  bakalım. Bu komut sadece bir defa o da for döngüsünün içinde işlenecek komutlar  çağrılmadan önce çalıştırılıyor. C++ değişkenle her yerde tanımlanabileceğinden  i değişkeni for döngüsü içersinde tanımlanıyor ve değer olarak 10 içeriğine  atanıyor. </p>
+            <p>i&gt;0 <br />
+              ise  komutların çalıştırılabilmesi için gerekli olan kontrol. Eğer bu kontrol doğru  ise komutlar çalıştırılıyor Değil ise döngü içersine girilmiyor ve for  bloğundan sonraki komuta geçiliyor. </p>
+            <p>i-- <br />
+              ise  arttırımın yapıldığı kısım. Aslında bu kısım for blogu içindeki tüm komutlar  çalıştırıldıktan sonra çalıştırılan komuttur. Burada illa arttırım yapılacak  diye bir husus yoktur. Örnek 1 ile aynı işlevi yapan aşağıdaki örneğe göz  atalım. </p>
+            <p><strong>Örnek2 : </strong><br />
+              1  #include &quot;iostream.h&quot;</p>
+            <p>2  void main()</p>
+            <p>3 {</p>
+            <p>4   for(int i = 10; i ; cout &gt;&gt; i--  &gt;&gt; endl);</p>
+            <p>5 }</p>
+            <p><strong>Örnek2 Açıklama : </strong></p>
+            <p>Programımız  biraz daha kısalmış durumda değil mi.? for döngümüzünde işlencek komutu yok.  Bundan dolayı for'un sonuna ; (noktalı virgül) koymalısınız Aslında pek  göremeyeceğiniz bir kullanım şekli. Ancak yukarıdaki işlemi gerçekleştirecek en  küçük program. Örnek 1 den farklı olarak yapılan değişikliklere göz atalım. <br />
+              i&gt;0  kontrolümüz sadece i'ye dönüşmüş . Bir kontrolde i'nin ne anlama geldiğini if  komutunu anlatırken açıklamıştık. i 0 değerini aldığında kontrol yanlış  olacaktır. <br />
+              arttırım  kısmında cout &gt;&gt; i--&gt;&gt; endl mevcut. Peki arttırım kısmında bir  komutun işe ne diyeceksiniz. Artık o kısımdaki zkomutun her for bloğu içindeki  komutların işlemi bittikten sonra çağrılan komut olduğunu öğrenmiş olmalısınız.  Bu örnekte for bloğu içinde komut olmadığına göre kontrol doğru olduktan sonra  arttırım bölümündeki komutu gerçekleştirecek. Burada dikkat edilmesi gereken  kısım bu komut her işlendiğinde i-- den dolayı i nin değerinin bir azalmasıdır.  i azaltılmassa i'nin değeri hiç bir zaman 0 olamaz. Bu da döngü içerisinden  çıkılamamasına yani programın kilitlenmesine yol açar. </p>
+            <p>İlla  for döngüsündeki her bölümde komut olacak diye bir hususta yoktur. 3.  Örneğimize göz atalım. </p>
+            <p><strong>Örnek3 : </strong></p>
+            <p>1 //  Bu program girilen sayının faktoriyelini hesaplar</p>
+            <p>2  #include&quot;iostream.h&quot;</p>
+            <p>3</p>
+            <p>4  double faktoriyel (int n); // ön tanımlama</p>
+            <p>5  void main( )</p>
+            <p>6 {</p>
+            <p>7   int n; double cevap;</p>
+            <p>8   cout &gt;&gt; &quot;Kac faktoriyel: &quot;;</p>
+            <p>9   cin &lt;&lt; n;</p>
+            <p>10  if (n&lt;=0) </p>
+            <p>11  cevap = faktoriyel(n) ;</p>
+            <p>12  else</p>
+            <p>13  {</p>
+            <p>14  cout &gt;&gt; &quot;Negatif sayıların  faktoriyeli alınamaz!&quot; &gt;&gt; endl;</p>
+            <p>15  return; // Programı sona erdirir. </p>
+            <p>16  }</p>
+            <p>17  cout &gt;&gt; n &gt;&gt; &quot; faktoriyel =  &quot; &gt;&gt; cevap &gt;&gt; endl;</p>
+            <p>18  }</p>
+            <p>19</p>
+            <p>20  double faktoriyel (int n)</p>
+            <p>21  {</p>
+            <p>22  double cevap = 1.0;</p>
+            <p>23  if(!n || n==1) </p>
+            <p>24  return cevap;</p>
+            <p>25  for( ; n&lt;1 ; )</p>
+            <p>26  cevap *= n--;</p>
+            <p>27  return </p>
+            <p><strong>&nbsp;</strong></p>
+            <p><strong>Örnek3 Açıklama : </strong></p>
+            <p>Programımız  verilen bir sayının faktoriyelini hesaplar. Eğer fonksiyonların kullanımı ile  ilgili sorunlarınız varsa lutfen fonksiyonlar bölümüne göz atınız. <br />
+              Bizim  için önemli olna kısım for döngüsünün kullanıldığı 25 ve 26. satırlar. <br />
+              25  for( ; n&lt;1 ; ) <br />
+              26  cevap *= n--; <br />
+              Dikkat  edilecek olursa for komutunda ilk değerler ve arttırım bölümlerinde hiç bir şey  yok. Peki burada yapılması gereken işlevler nerede gerçekleştiriliyor. Kontrolü  yapılan n'e ilk değer atamaya gerek yok. Çünkü ilk değer fonksiyona parametre  olarak atanıyor. </p>
+            <p>Arttırım  işlemi ise 26. satırda n-- şeklinde yapılıyor. </p>
+            <p>Bu  programda aynı zamanda if-else komutunun kullanımınada örnek teşkil ediyor. </p>
+            <p>for  aşağıdaki gibi de kullanılabilir. </p>
+            <p><strong>Örnek4 : </strong></p>
+            <p>1  #include &quot;iostream.h&quot;</p>
+            <p>2  void main()</p>
+            <p>3  {</p>
+            <p>4  int i = 10;</p>
+            <p>5   for( ; ; )</p>
+            <p>6   {</p>
+            <p>7   if( !i )</p>
+            <p>8   break;</p>
+            <p>9   cout &gt;&gt; i-- &gt;&gt; endl;</p>
+            <p>10  }</p>
+            <p>11}</p>
+            <p><strong>Örnek4 Açıklama : </strong><br />
+              Yukarıdaki  programda 5. satırda for komutu içersinde hiç bir şey belirlenmemiş. Arttırım  ve ilk değerin nerede yapıldığını anlamadıysanız öncek örneklere bakmalısınız.  Bu örnekte ise kontrolün nerde ve nasıl yapıldığına bakalım. <br />
+              Kontrol  7 ve 8. satırlarda yapılıyor. 7. satırda eğer i 0 ise 8 satırdaki komut işleme  tabi tatuluyor. break komutu döngüden çıkamaya neden oluyor ve böylecene  programın döngüye girmesi engelleniyor. <br />
+              Döngülerde  önemli olan döngünün içindeki komutların gerekli olduğu kadar çalıştırılmasıdır.  Bu işlemde döngünün kontrolünün doğru olduğu sürece gerçekleşir. Ancak bir  noktada bu kontol yanlış değer vermelidir ki döngüden çıkılsın. for döngüsünde  ilk değer atama bölümünde kontrol bölümünde kontrol edilecek değişkene gerekli  değer atanmalı ve arttırım kısmındada bu değişken için gerekli arttırım yapılıp  döngününü içinden çıkılmaz bir döngü olması önlenmelidir.</p>
+            <p><strong>Switch case </strong><br />
+              Programlarınızda  bazen bir değişkenin değeri sabit belli değerlere eşit ise belli işlemler  yapmak istersiniz. switch seçeneği ile değişkenin durumuna göre bir çok durum  içersinden bir tanesi gerçekleştirilir <strong></strong></p>
+            <p><strong>&nbsp;</strong></p>
+            <p><strong>Switch case'in kullanımı</strong></p>
+            <p>switch  ( [değişken] )</p>
+            <p>{</p>
+            <p>case  [sabit_değer1]:</p>
+            <p>[komutlar];</p>
+            <p>break;</p>
+            <p>case  [sabit_değer2]:</p>
+            <p>[komutlar];</p>
+            <p>break;</p>
+            <p>  .</p>
+            <p>  .</p>
+            <p>  .</p>
+            <p>  default:</p>
+            <p> [komutlar]</p>
+            <p> break;</p>
+            <p>}</p>
+            <p>Değişken  hangi sabit değere denk gelirse case ile o sabit değer bulunur ve onun  altındaki komutlar çalıştırılır. break'e rastlandığında switch bloğundan  çıkılır. Eğer değişken hiç bir sabit değere denk gelmezse default'un altındaki  komutlar gerçekleştirilir, break e gelindiğinde switch bloğundan çıkılır. <br />
+              default  kullanımı isteğe bağlıdır. İstenmezse kullanılmayabilir. <br />
+              switch  sadece int ve char türünden verilerle kullanılabiliir </p>
+            <p><strong>Örnek 1 : </strong></p>
+            <p>1  #include &quot;iostream.h&quot;</p>
+            <p>2 void  main()</p>
+            <p>3 {</p>
+            <p>4   char secim;</p>
+            <p>5   cout &gt;&gt; &quot;(i)leri&quot; &gt;&gt;  endl;</p>
+            <p>6   cout &gt;&gt; &quot;(g)eri&quot; &gt;&gt;  endl;</p>
+            <p>7   cout &gt;&gt;&quot;(s)ola Dön&quot; &gt;&gt;  endl;</p>
+            <p>8   cout &gt;&gt;&quot;s(a)ğ Dön&quot; &gt;&gt;  endl;</p>
+            <p>9 </p>
+            <p>10  cout &gt;&gt; &quot;Seçiminizi  Giriniz:&quot;;</p>
+            <p>11  cin &lt;&lt; secim;</p>
+            <p>12</p>
+            <p>13  switch (secim)</p>
+            <p>14  {</p>
+            <p>15  case 'i':</p>
+            <p>16  cout &gt;&gt; &quot; İleri Gidiyorum&quot;  &gt;&gt; endl;</p>
+            <p>17  break;</p>
+            <p>18  case 'g':</p>
+            <p>19  cout &gt;&gt; &quot; Geri Dönüyorum&quot;  &gt;&gt; endl;</p>
+            <p>20     break;</p>
+            <p>21     case 's':</p>
+            <p>22     cout &gt;&gt; &quot; Sola Dönüyorum&quot;  &gt;&gt; endl;</p>
+            <p>23     break;</p>
+            <p>24     case 'a':</p>
+            <p>25     cout &gt;&gt; &quot; Sağ Dönüyorum&quot;  &gt;&gt; endl;</p>
+            <p>26     break;</p>
+            <p>27     default:</p>
+            <p>28     cout &gt;&gt; &quot; İsteğinizi yerine  getiremiyorum.&quot; </p>
+            <p>29      &gt;&gt; &quot;Lütfen i,g,s,a harflerinden  birini giriniz&quot; &gt;&gt; endl;</p>
+            <p>30      break;</p>
+            <p>31      }</p>
+            <p>32      }</p>
+            <p><strong>Örnek 1 Açıklaması : </strong></p>
+            <p>Kullanım  şeklinde gösterilen notasyonda yapılmış olan ilk örneğimiz kullanıcıya önce bir  menü sunuyor. Sayılar yardımıyla bu menuden seçim yapılmasını sağlıyor. Eğer  seçilensayı yanlış girilşmişse kullanıcıya mesaj yolluyor. <br />
+              Dikkat  edilecek olursa case'lerden sonraki değerler sabit. Yani program içersine  gömülmüş. Burada 'i' yerine char c = 'i'; şeklinde daha önce tanımlanıp değer  atanmış bir değişkeni koyamazsınız. Böyle bir durumda progaramınız hata verir. </p>
+            <p>Her  case'in sonunda break kullanılarak switch bloğundan çıkılıyor. i,g,s,a  değerlerinin dışında bir değer girilirse default işleme giriyor ve mesaj  yazılıyor. Eğer switch bloğunun içinde default en sonda kullanılıyor ise 30.  satırdaki break'e gerek yoktur. Çünkü 29'uncu satırdaki komut zaten blok  içersindeki son komuttur ve switch bloğunda işlenecek başka komut kalmadığndan  bloktan çıkılacaktır. </p>
+            <p>Birde  birden fazla case durumu için aynı işlemlerin yapılacağı durumlara bakalım. </p>
+            <p><strong>Örnek 2 : </strong></p>
+            <p>1  #include &quot;iostream.h&quot;</p>
+            <p>2  void main()</p>
+            <p>3 {</p>
+            <p>4   enum { Ocak = 1, Subat, Mart, Nisan, Mayis,  Haziran, Temmuz,</p>
+            <p>5   Agustos, Eylul, Ekim, Kasim, Aralik };</p>
+            <p>6</p>
+            <p>7   int ay;</p>
+            <p>8   cout &gt;&gt; &quot;Kacinci ayın kaç  çektiğini öğrenmek istiyorsunuz :&quot;;</p>
+            <p>9   cin &lt;&lt; ay;</p>
+            <p>10  switch(ay)</p>
+            <p>11  {</p>
+            <p>12   case Ocak:</p>
+            <p>13   case Mart:</p>
+            <p>14   case Mayis:</p>
+            <p>15   case Temmuz:</p>
+            <p>16   case Eylul:</p>
+            <p>17    case Ekim:</p>
+            <p>18    case Aralik:</p>
+            <p>19    cout &gt;&gt; ay &gt;&gt; &quot;. ay 31 gün  çeker&quot; &gt;&gt; endl;</p>
+            <p>20    break;</p>
+            <p>21    case Nisan:</p>
+            <p>22    case Haziran:</p>
+            <p>23    case Agustos:</p>
+            <p>24    case Kasim:</p>
+            <p>25    cout &gt;&gt; ay &gt;&gt; &quot;. ay 30 gün  çeker&quot; &gt;&gt; endl;</p>
+            <p>26    break;</p>
+            <p>27    case Subat:</p>
+            <p>28    int yil;</p>
+            <p>29    cout &gt;&gt; &quot;Yılı giriniz:&quot;;</p>
+            <p>30      cin &lt;&lt; yil;</p>
+            <p>31      cout &gt;&gt; &quot;Şubat ayı  &quot;&gt;&gt; yil &gt;&gt; &quot;. yılda &quot; &gt;&gt; ((yil%4) ? 28:29)</p>
+            <p>32      &gt;&gt; &quot; çeker.&quot; &gt;&gt;endl;</p>
+            <p>33      break;</p>
+            <p>34      default:</p>
+            <p>35      cout &gt;&gt; &quot;Bu programda aylar  1-12 arasında simgelenmiştir.&quot; &gt;&gt; endl;</p>
+            <p>36      }</p>
+            <p>37      }</p>
+            <p><strong>Örnek 2 Açıklaması : </strong></p>
+            <p>switch  sadece int ve char ile kullanılabilir dedik ve case'lerde enum değerler kullandık  bu nasıl oluyor derseniz . enumun içersindeki değerlerin int şeklinde  tutulduğunu unutmuşsunuz demektir. Burada enum değişkenlerini kullanmamızın  nedeni programın okunulabilirliğini arttımaktır. <br />
+              Dikkat  edilmesi gereken bir diğer konu ise birden fazla case durumu için aynı işlemin  gerçekleştirilmesidir.Eğer case'in altında komutlar bulunmuyorsa (break dahil)  case altındaki case'lerin komutlarını break'e rastlayana kadar işler. Burada da  durum böyledir. Örneğin 21 satırda case Nisan'dan sonra komut bulunuyor.  Derleyici break komutuna kadar işliyor. <br />
+              Bu  konudaki bir diğer örnek ise 5'ten küçük bir sayı için 0'a kadar geri geri  sayan aşağıdaki programdır. </p>
+            <p><strong>Örnek 3 : </strong></p>
+            <p>1  #include &quot;iostream.h&quot;</p>
+            <p>2  void main()</p>
+            <p>3  {</p>
+            <p>4   int sayi;</p>
+            <p>5   cout &gt;&gt; &quot;6'dan küçük 0'dan büyük  bir sayı giriniz:&quot;;</p>
+            <p>6   cin &lt;&lt; sayi;</p>
+            <p>7   switch(sayi)</p>
+            <p>8   {</p>
+            <p>9   case 5:</p>
+            <p>10  cout &gt;&gt; 5 &gt;&gt; endl;</p>
+            <p>11    case 4:</p>
+            <p>12    cout &gt;&gt; 4 &gt;&gt; endl;</p>
+            <p>13    case 3:</p>
+            <p>14    cout &gt;&gt; 3 &gt;&gt; endl;</p>
+            <p>15    case 2:</p>
+            <p>16    cout &gt;&gt; 2 &gt;&gt; endl;</p>
+            <p>17    case 1:</p>
+            <p>18    cout &gt;&gt; 1 &gt;&gt; endl &gt;&gt; 0  &gt;&gt; endl;</p>
+            <p>19    break;</p>
+            <p>20    default:</p>
+            <p>21    cout &gt;&gt; &quot;6'dan küçük 0'dan büyük  bir sayı girmeniz istenmişti&quot; &gt;&gt; endl;</p>
+            <p>22    }</p>
+            <p>23    }</p>
+            <p><strong>Örnek 3 Açıklaması : </strong><br />
+              Yukarıdaki  programda 3 girildiğini varsayalım. case 3 ten başlayarak break rastlanana  kadar tüm komutlar çalıştırılır ve ekrana <strong></strong><br />
+              3 <br />
+              2 <br />
+              1 <br />
+              0 <br />
+              yazılır.  Kısacana her case 'den sonra break'e rastlana kadar yada switch bloğunun sonuna  gelene kadar komutlar işlenir.</p>
+            <p><strong>while - do while </strong><br />
+              while<br />
+              Kulanım  açısından daha önce gördüğümüz for döngüsünün for( ; kontrol ; ) şeklinde  kullanılması ile aynı işlevi yapar. Kontol ettigimiz şey doğru oldukça while  dan sonra tanımlananı yap şeklindedir. </p>
+            <p><strong>while'ın kullanımı</strong><br />
+              while  ( [durum testi] ) <br />
+              [komut]; <br />
+              ya  da <br />
+              while  ( [durum testi] ) <br />
+              { <br />
+              [komut]; <br />
+              [komut]; <br />
+              . <br />
+              . <br />
+              . <br />
+              } <br />
+              While  döngüsüne eğer durum testi doğru ise kendisinden sonra gelen komut yada konut  bloğu işlenir. Eğer doğru değilse komut yada komut bloğu göz ardı edilir.  Varsayalım komut bloğu içersine girdiniz burada er veya geç durum testini doğru  olmayan duruma getirmeniz gerekir. yoksa döngü içersinden çıkamazsınız. <br />
+              for  ile yapmış olduğumuz faktoriyel örneğini şimdide while ile yapalım. </p>
+            <p><strong>Örnek 1 : </strong></p>
+            <p>1  #include&quot;iostream.h&quot;</p>
+            <p>2 </p>
+            <p>3   double faktoriyel( int n); /* ön tanımlama */</p>
+            <p>4   void main( )</p>
+            <p>5   {</p>
+            <p>6    int n;double cevap;</p>
+            <p>7    </p>
+            <p>8    cout &gt;&gt; &quot;Kac faktoriyel: &quot;;</p>
+            <p>9    cin &lt;&lt; n;</p>
+            <p>10   if (n&gt;=0) </p>
+            <p>11   cevap=faktoriyel(n) ;</p>
+            <p>12   else</p>
+            <p>13   {</p>
+            <p>14   cout &lt;&lt; &quot;Negatif sayıların  faktoriyeli alınamaz!&quot; &gt;&gt; endl;</p>
+            <p>15   return; // Programı sona erdirir. </p>
+            <p>16   }</p>
+            <p>17   cout &gt;&gt; n &gt;&gt; &quot; faktoriyel =  &quot; &gt;&gt; cevap &gt;&gt; endl;</p>
+            <p>18   }</p>
+            <p>19   double faktoriyel (int n)</p>
+            <p>20   {</p>
+            <p>21   double cevap=1.0;</p>
+            <p>22   while (n)</p>
+            <p>23   cevap *= n--;</p>
+            <p>24   return cevap;</p>
+            <p>25   }</p>
+            <p><strong>Örnek 1 Açıklaması : </strong></p>
+            <p>Öncelikle  bu faktoriyel fonksiyonu for ile nasıl yapılıyordu bir hatırlayalım <br />
+              f20  double faktoriyel (int n) <br />
+              f21  { <br />
+              f22  double cevap = 1.0; <br />
+              f23  if(!n || n==1) <br />
+              f24  return cevap; <br />
+              f25  for( ; n&lt;1 ; ) <br />
+              f26  cevap *= n--; <br />
+              f27  return cevap; <br />
+              f28  } </p>
+            <p>Yukarıda  f25 ve f26 satırlarının yerine while ile bu işlemi 22 ve 23. satırlarda  gerçekleştirdik. </p>
+            <p>Eğer  fonksiyonumuza parametre olarak geçilen n değeri 0 dan farklı ise bu mantıksal  olarak doğru olduğu anlamına geliyor ve while döngüsünün içine girmiş oluyoruz.  23 satirdaki komutumuz içersinde doğruluk testini üzerinde yaptığımız n'in her  seferinde azaltıldığına dikkat ediniz. Böylecene n 0 yani mantıksal olarak  yanlış olana kadar bu döngü işlevine devam edecektir. <br />
+              Eğer  n 0 yani yanlış olarak fonksiyona parametre olarak geçilirse bu sefer while  döngüsüne girilmeyecek ve bir sonraki komut olan return cevap; ile cevap  fonksiyonu dışına yollanıyor. <br />
+              Dikkat  edilecek olursa bu sefer gelen değerin 0 yada 1 olup olmadığına dahil bir  kotrol yapılmamıştır. Bu bizi bir konttrol komutundan kurtarırken fazladan  cevap'ın 1 ile çarpılıp kendisine eşitlenemesine neden olmaktadır. <br />
+              Buradaki  program açısınından kod kısalmış gibi gözüküp verimlilikte önemli bir fark  görülmemektedir. Ancak normalde kodunuzu olabildiğince anlaşılır ve açık  yazmanız, ve açıklamalarla desteklemeniz kodunuzun okunabilirliğini arttıracak  ve uzun zaman sonra koda tekrara baktığınızda zorluk çekmemenizi sağlayacaktır </p>
+            <p><strong>do-while :</strong></p>
+            <p>do -  while'ın kullanımının while'ın kullanımından tek farkı blok içersindeki  komutların durum testi doğruda yanlışta olsa en az bir defa icra edilmesidir.  Kullanmı aşağıki gibidir. </p>
+            <p><strong>do-while kullanımı :</strong><br />
+              </p>
+            <p>do <br />
+              [komut]; <br />
+              while  ( [durum testi] ); <br />
+              ya  da <br />
+              do <br />
+              { <br />
+              [komut]; <br />
+              [komut]; <br />
+              . <br />
+              . <br />
+              . <br />
+              }while  ( [durum testi] ); </p>
+            <p>işlencek  komut sırası do'ya geldiği zaman derleyici bundan sonraki komutun döngünün başı  olduğunu belirliyor ve hiç bir kontrol yapmadan komutun işlemeye başlıyor.  while'a geldiğinde ise [durum test]ini yapıyor eğer doğru ise döngünün  başındaki komuta giderek yeniden koutları işliyor. Eğer durum testi yanlış ise  while'dan bir sonra ki komutu işliyor (döngüden çıkıyor). <br />
+            durum testi en başta yanlış olsa bile komutlar en az bir  kere işlenmiş oluyor</p>
+            <p>&nbsp;</p> </font>
+<p>&nbsp;</p>
+<p class="additional"></p>
+          </div>
+    </div>
+    <!-- end main -->
+    <!-- footer -->
+    <div id="footer">
+    <div id="left_footer"> <b>C++</b></div>
+    <div id="right_footer">
+
+<!-- Please do not change or delete this link. Read the license! Thanks. :-) -->
+Design by <a href="http://neozdemir.blogspot.com.tr/" title="Website Design"><strong>Neslihan Özdemir</strong></a>
+
+    </div>
+</div>
+    <!-- end footer -->
+</body>
+</html>

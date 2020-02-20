@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<!-- header -->
+    <div id="header">
+    <div id="menu">
+       <div id="menu_list"></div>
+    </div>
+</div>
+      <div id="logo">
+      <div id="logo_text">
+        <h1><a href="index.html"><img src="images/cplusplus.gif" width="163" height="74" alt="cplusplus" /></a></h1>
+      </div>
+    </div>
+    <!--end header -->
+    <!-- main -->
+    <div id="main">
+          <div id="sidebar">
+          
+            <div class="item"></div>
+            <div class="item"><span class="description"></span>
+           	<blockquote>
+           	  <p><a href="index.html">ANASAYFA</a></p>
+         	  </blockquote>
+            <p>&nbsp;</p>
+            <ul>
+              <li><strong><a href="index.html">TARİHÇE</a></strong></li>
+              <li><strong><a href="cgiris.html">C ++ GİRİŞ</a></strong></li>
+              <li><strong><a href="cavant.html">C++ AVANTAJLARI</a></strong></li>
+            
+              <li><strong><a href="operatorler.html">OPERATÖRLER</a></strong></li>
+              <li><strong><a href="pointerlar.html">POİNTERLAR</a></strong></li>
+              <li><strong><a href="diziler.html">DİZİLER</a></strong></li>
+              <li><strong><a href="fonksiyonlar.html">FONKSİYONLAR</a></strong></li>
+              <li><strong><a href="donguler.html">DÖNG</a></strong><a href="donguler.html">ÜLER</a></li>
+            </ul>
+            <dl>
+              </dl>
+            <p>&nbsp;</p>
+            <p><a href="index.html"><img src="images/computer.jpg" width="200" height="125" alt="kaynaklar" /></a></p>
+            </div>
+           
+          </div>
+          <div id="text" >
+                <h1><strong>POİNTERLAR </strong></h1>
+                <font size="2"> <p>Pointerlar  en yalın şekilde değer olarak bir hafıza adresini tutan değişkenler olarak  tanımlanır. Genelde bir değişkenlerin adreslerini içerirler ve bu değişkenlerin  değerlerine dolaylı olarak ulaşılmasını sağlarlar. <br />
+                  Başlıca  kullanım alanları dinamik olarak büyüyen veri yapılarının oluşturulması (linked  list (bağlı liste), kuyruk (queue), yığın (stack) gibi), fonksiyonlara referans  ile değer geçilmesidir. Büyük veri yapılarının işlenmesinde performansı  arttırmak için bu verilerin adresleri üzerinde işlem yapılması için  kullanılırlar. <br />
+                  Pointerlar  C ve C++ ‘ın ayrılmaz bir parçasıdır. C ve C++ da pointer kullanmadan program  yazmak düşünülemez. Bu kadar sık kullanılmasın yanıda en sık hata yapılan ve en  zor anlaşılan kısımlarından biridir. Pointer kullanımında yapılan hataların  bulunması genelde zordur ve sistemin kitlenmesine neden olur. <br />
+            Program  yazarken programı çalıştırmadan önce yaptıklarınızı kaydetmeyi alışkanlık  edinin. Özellikler C/C++ da program yazarken makinanın kitlenmesiyle sıkça  karşılaşacaksınız. Saatlerce uğraşıp yazdığınız kodun kaybolması hiç te hoş  birşey değil. </p>
+                <p><strong>Pointer Operatörleri </strong></p>
+                <p>Pointerlardan  bahsedilince hemen aklımıza *, &amp; operatörleri gelir. <br />
+  &amp;  operatörü kendisinden sonra gelen ifadenin adresini bulur yani &quot;.. nin  adresi&quot; olarak ifade edebiliriz. <br />
+                  Örneğin  &amp;val ifadesi “val’in adresi” anlamına gelir. <br />
+                  *  operatörü ise kendisinden sonra gelen pointer’in gösterdiği değeri refreans  eder. Yani “ .. nin gösterdiği adresteki değer” olarak ifade edilebilr. Örneğin  *pVal ifadesi “pVal’in gösterdiği adresteki değer” olarak ifade edilebilir.<br />
+                  Tanımlama  ve Kullanım Şekilleri:<br />
+                  Şu  ana kadar pointerlardan ve pointerlar ile birlikte anılan *, &amp;  operatörlerinden kısaca bahsettik Şimdi artık C++’da bahsettiğimiz bu  kavramların nasıl kullanıldıklarından bahsedeceğiz. Basit bir örnek ile işe  başlayalım. <br />
+                  #include  &lt;iostream.h&gt; </p>
+                <p>main()</p>
+                <p>{ </p>
+                <p>int  val = 5; </p>
+                <p>//integer  val değişkeni için hafıza yer ayarla ve 5 değerini ata.</p>
+                <p>int  *pVal; </p>
+                <p>//integer  pointer pVal değişkeni için hafızada yer ayır. </p>
+                <p>pVal  = &amp;val </p>
+                <p>//pVal  değişkenine val değişkeninin adresini ata. </p>
+                <p>*pVal  = 8; </p>
+                <p>//pVal  değişkenin gösterdiği hafıza alanına 8 değerini ata </p>
+                <p>cout  &gt;&gt; &quot;val değiskenin adresi = &quot; &gt;&gt; &amp;val </p>
+                <p>cout  &gt;&gt; &quot;pVal değiskenin adresi=&quot; &gt;&gt; &amp;pVal </p>
+                <p>cout  &gt;&gt; &quot;val değiskenin değeri = &quot; &gt;&gt; val; </p>
+                <p>cout  &gt;&gt; &quot;pVal değiskenin değeri =&quot; &gt;&gt; pVal; </p>
+                <p>cout  &gt;&gt; &quot;pVal değiskenin gösterdiği yerdeki değer=&quot; &gt;&gt; *pVal; </p>
+                <p>};</p>
+                <p>Yukarıdaki  örnek program pVal ve val değişkenlerinin adreslerini ve içlerindeki değerleri  ekrana yazıyor </p>
+                <p><strong>Örnek </strong></p>
+                <p>Programın  ekran çıktısı ise aşağıdaki gibi.&nbsp; </p>
+                <p>val  degiskenin adresi = 0x13df2914 <br />
+                  pVal  degiskenin adresi=0x13df2910 <br />
+                  val  degiskenin degeri = 8 <br />
+                  pVal  degiskenin degeri =0x13df2914 <br />
+                  pVal  degiskenin gösterdigi yerdeki deger=8 </p>
+                <p>Ekran  çıktısından da görüldüğü üzere pVal değişkeni hafızada ayrı bir yer ayrılmış  durumda ve bu ayrılan yere program içerisinde val değişkenin adresi atanıyor.  val değişkeni ile direkt olarak hiç bir işlem yapılmamasına rağmen val  değişkenini dolaylı olarak gösteren pVal değişkenini gösterdiği adrese 8 değeri  atandığında val değişkenin içeriği de değişti. <br />
+  &nbsp;Hafızanın  durumunu grafik olarak gösterirsek <br />
+  &nbsp;Başlangıçta  aşagıdaki gibidir. pVal değişkenin gösterdiği adresteki bilgi hakkında bir fikrimiz  yok. <br />
+                  C ve  C++'da değişkenlere otomatik olarak atanan bir ilk değer yoktur.Değişken  tanımlandığında değişkene anlamlı bir değer atamak bizim sorumluluğumuzdadır.  Bir pointer değişkenine anlamlı bir adres bilgisi atamadan değişkenin  gösterdiği adrese değer atamak genellikler sistemin askında kalması ,  kitlenmesi veya başka bir programın hata vermesine neden olur.Sadece global ve  statik değişkenlere derleyici tarafından ilk değer atanır </p>
+                <p>pVal  0x13df2910 ??? <br />
+                  val  0x13df2914 5 </p>
+                <p>val  değişlenin adresi pVal değişkenine atanıyor. </p>
+                <p>pVal  0x13df2910 0x13df2914 <br />
+                  val  0x13df2914 5 <br />
+                  pVal  değişkenin gösterdiği hafıza alana 5 atanıyor. </p>
+                <p>pVal  0x13df2910 0x13df2914 <br />
+                  val  0x13df2914 8 <br />
+                  Pointer  değişkeninin kendisi de hafızadan belli bir bölge işgal eder. pointer  değişkenini adresi ile göstediği adres birbiri ile karıştırılmamalıdır</p>
+                <p><strong>Pointer Aritmetiği</strong></p>
+                <p>Pointerların  içerisindeki verinin normal değişkenlerin içindeki verilerden farklı  yorumlandığını önceki konularda yukarıda gördük. Aynı durum pointerlar üzerinde  yapılan aritmetik işlemlerde de geçerlidir. <strong></strong><br />
+                  Öncelikle  pointerlar üzerinde toplama , çıkarma ve karşılaştırma işlemlerinin  yapılabildiğini belirtelim. Fakat mod alma, bölme, çarpma gibi işlemler pointer  değişkenler üzerinde yapılamaz. <br />
+                  Aritmetik  işlem operatörlerinin pointerlar üzerindeki etkileri normal değişkenlerin  üzerindekinden farklıdır. Örnek olarak aşağıdaki kodu inceliyelim. </p>
+                <p>#include  &lt;iostream.h&gt; </p>
+                <p>main()</p>
+                <p>{ </p>
+                <p>int  *pIntVar, intVar = 5; </p>
+                <p>pIntVar  = &amp;intVar </p>
+                <p>cout&gt;&gt;  &quot;intVar =&quot; &gt;&gt; intVar&gt;&gt; endl; </p>
+                <p>cout&gt;&gt;  &quot;pIntVar =&quot; &gt;&gt; pIntVar&gt;&gt; endl; </p>
+                <p>cout&gt;&gt;  &quot;(intVar + 1) =&quot; &gt;&gt; (intVar + 1)&gt;&gt; endl; </p>
+                <p>cout&gt;&gt;  &quot;(pIntVar + 1) =&quot; &gt;&gt; (pIntVar + 1)&gt;&gt; endl;</p>
+                <p>}; </p>
+                <p><strong>Örnek </strong></p>
+                <p>Yukarıdaki  program biri integer diğeri ise integer pointer olmak üzere iki tane değişken  tanımlar. Bunlardan integer olana 5 değerini pointer olana ise integer  değişkenin değerinin atar. Bu değerleri sırası ile ekrana yazdırır. Daha sonra  her iki değişkenin içlerindeki değerlerin bir fazlasını ekrana yazdırır.  Programın ekran çıktısı aşağıdaki gibidir </p>
+                <p>intVar  =5 </p>
+                <p>pIntVar  =0x359728b2 </p>
+                <p>(intVar  + 1) =6 </p>
+                <p>(pIntVar  + 1) =0x359728b4 </p>
+                <p>intVar  ve (intVar + 1) ifadelerinin değerleri kıyaslanırsa (intVar + 1) ifadesinin  değerinin intVar ifadesinden bir fazla olduğu görülür. Buraya kadar herşey  normal fakat pIntVar ve (pIntVar + 1) ifadelerini kıyaslarsak (pIntVar + 1)  ifadesinin pIntVar değişkenin değerinden iki fazla olduğunu görürüz. Peki bunun  nedeni nedir? Niden bir, üç, veya dört değil de iki ? <br />
+                  Pointer  değişknelerinin tanımını yaparken pointerların bir değişkenin adresini tutuğunu  söylemiştik. Integer bir pointer hafızadaki bir integer’ın bulunduğu adresi  tutar. Bu adres bilgisini bir arttırmak bir sonraki integer’ın bulunduğu adrese  gitmek demektir. Bizim oluşturduğumuz proje 16 bitlik program üretiyor  dolayısıyla integer’ın büyüklüğü 2 byte olarak kabul ediliyor. Yani bir sonraki  integer’ın bulunduğu adrese ulaşmak için pointer değişkenimizin içerdiği değer  iki arttırılıyor. Aynı durum (- )operatörü için de geçerlidir. (-) operatöründe  ise bir önceki integer’ın adresine konumlanılmaya çalışılacaktır dolayısıyla  iki azaltılacaktır. <br />
+                  Olayı  genelleştirirsek herhangi bir tipte tanımlanmış bir pointer’ın değerini belli  bir m değeri kadar arttırmak değişkenin değerinde (pointer’in tanımlı olduğu  tipin uzunluğu) * m kadar bir artıma sebep olur. <br />
+                  Pointer  aritmetiği diziler üzerinde yapılan işlemlerde sıkça kullanılırlar. pA ve pB  iki pointer değişken olsun eğer pA ve pB aynı dizinin elemanlarını  gösteriyorlarsa pA-pB işlemi anlamlı olur . pA nın dizinin i. elemanını pB’nin  ise dizinin j. elemanımı gösterdiğini varsayarsak pA-pB = i-j olur. <br />
+                  include </p>
+                <p>main()</p>
+                <p>{ </p>
+                <p>int*  pA, *pB; </p>
+                <p>pA =  new int[1]; </p>
+                <p>pB =  new int[1]; </p>
+                <p>*pA  = 5; </p>
+                <p>*pB  = 150; </p>
+                <p>cout&gt;&gt;  &quot;pA pointer'inyn gösterdiği hafiza bölgesi ---&lt; pA =&quot; &gt;&gt; pA  &gt;&gt; endl; </p>
+                <p>cout&gt;&gt;  &quot;pB pointer'inın gösterdiği hafiza bölgesi ---&lt; pB =&quot; &gt;&gt; pB  &gt;&gt; endl; </p>
+                <p>cout&gt;&gt;  &quot;pA pointer'inın gösterdiği yerdeki değer ---&lt; *pA =&quot; &gt;&gt; *pA  &gt;&gt; endl; </p>
+                <p>cout&gt;&gt;  &quot;pB pointer'inın gösterdiği yerdeki değer ---&lt; *pB =&quot; &gt;&gt; *pB  &gt;&gt;endl; </p>
+                <p>pA =  pB; </p>
+                <p>cout&gt;&gt;  &quot;pA pointer'inin gösterdiği yerdeki değer ---&lt; *pA =&quot; &gt;&gt; *pA  &gt;&gt;endl; </p>
+                <p>cout&gt;&gt;  &quot;pB pointer'inin gösterdiği yerdeki değer ---&lt; *pB =&quot; &gt;&gt; *pB  &gt;&gt;endl; </p>
+                <p>cout&gt;&gt;  &quot;pA pointer'inın gösterdiği hafiza bölgesi ---&lt; pA =&quot; &gt;&gt; pA  &gt;&gt; endl; </p>
+                <p>cout&gt;&gt;  &quot;pB pointer'inın gösterdiği hafiza bölgesi --&lt; pB =&quot; &gt;&gt; pB  &gt;&gt; endl; </p>
+                <p>delete  []pA;</p>
+                <p>delete  []pB; </p>
+                <p>);</p>
+                <p><strong>Örnek </strong></p>
+                <p>Yukarıdaki  örnek program pointerlarda sıkça yapılan bir hatayı göstermektedir. Program pA  ve pB isminde iki integer pointer tanımlayıp bunlara dinamik olarak tanımlanan  birer integer’ın adresilerini atıyor. Daha sonra pA’nın gösterdiği adrese 5,  pB’nin gösterdiği adrese ise 150 değerleri atanıyor. Buraya kadar herşey  normal. <br />
+                  Fakat  pA = pB satırı çok masumane bir atama işlemi gibi görünmesine karşın sıkça bir  hataya karşılık geliyor. <br />
+  &nbsp;Bu  komut çalışınca ne olur ? pA değişkeni de pB’nin gösterdiği adresi göstermeye  başlar. Güzel fakat pA’nın gösterdiği dinamik olarak ayırdığımız yerin adresi  neydi ? O adrese bir daha nasıl ulaşabiliz? Ulaşamayız. Hafızadan dinamik  olarak ayırdığımız o bölge kayboldu. Dinamik olarak ayırıp pA’ya atadığımız  hafıza bölgesi bilgisayar kapana kadar kayıp olarak kalacak. Durun daha bu  kadarla da bitmedi bu masumame atmama komutu başımıza daha neler açacak. <br />
+                  Dinamik  yer ayırmaktan bahsettikya. Dinamik olarak ayırdığımız her yeri işimiz  bittiğinde serbest bırakmalıyız ki bir süre sonra sistem, sistem kaynakları çok  düstü şeklinde bir uyarı vermesin. Kodu incelemeye devam edersek en son iki  komut dinamik olarak ayrılan hafızayı serbest bırakıyor. Fakat dikkatli  bakılırsa bu iki komutun başımıza ne gibi büyük sorunlar açacağını görebiliriz.  delete []pA <br />
+                  komutu  pA </p>
+                <p>değişkeninin  gösterdiği hafıza bölgesini serbest bırakmaya çalışıyor. Burada sorun yok  gerçekten de bu bölgeyi program başında dinamik olarak ayırdık. Fakat pB  pointer’ı da aynı adresi gösteriyordu o da aynı bölgeyi serbest bırakmaya  çalışacak. Ama zaten orası serbest bırakıldı. O bölge artık bize ait değil ki  bu durumda ne olacak. ? Kim bilir ? Büyük bir ihtimalle makinamız  kitlenecektir. <br />
+                  Buradan  çıkaracağımız sonuç pointer değişkenleri kullanırken dikkatli olmamız  gerektiğidir <br />
+                  Özellikle  atama işlemlerinde dikkatli olmalıyız. Pointer’ın gösterdiği hafıza bölgesine  değer atamaya çalışırken yukarıdaki programda olduğu gibi pointer’ın değerini  değiştire biliriz. Bu da bulunması zor hatalara sebep olur. </p>
+                <p>pA  pointer'inın gösterdiği hafiza bölgesi ---&lt; pA =0x39570366 </p>
+                <p>pB  pointer'inın gösterdiği hafiza bölgesi ---&lt; pB =0x3957035e <br />
+                  pA  pointer'inın gösterdiği yerdeki değer ---&lt; *pA =5 </p>
+                <p>pB  pointer'inın gösterdiği yerdeki değer ---&lt; *pB =150 </p>
+                <p>pA  pointer'inın gösterdiği yerdeki değer ---&lt; *pA =150 </p>
+                <p>pB  pointer'inın gösterdiği yerdeki değer ---&lt; *pB =150 </p>
+                <p>pA  pointer'inın gösterdiği hafiza bölgesi ---&lt; pA =0x3957035e </p>
+                <p>pB  pointer'inın gösterdiği hafiza bölgesi ---&lt; pB =0x3957035e </p>
+                <p>Pointerların  kullanımında sıkça yapılan diğer bir hata ise pointer değişkenine bize ait  olduğundan emin olduğumuz geçerli bir hafıza adresi atamadan pointer’ın  gösterdiği adrese bilgi yazılmasıdır. <br />
+                  Bir  fonksiyon içinde kullanılan yerel değişkenler otomatik olarak yaratılır. Bu  şekilde tanımlanan değişkenlere derleyici tarafından bir ilk değere verilmez,  bu değişken pointer tipindeyse gösterdiği adresin ne olacağı önceden  kestirilemez. Bu değer işletim sisiteminin bulunduğu bölgelerden birinin adresi  olabileceği gibi o an için kullanılmayan bir hafıza bölgesinin adresi de  olabilir. Dolayısıyla ilk değer atanmamış pointer (global ve statik  değişkenlere derleyici tarafından ilk değer atanır) değişkenlerinin gösterdiği  hafıza bölgesine değere atama işleminin davranışı belirsizdir. Hiç bir sorun  çıkmayayabileceği gibi makinanın kitlenmesine de sebep olabilir. </p>
+                <p><strong>Tip Dönüşümleri </strong></p>
+                <p>Pointerlar  önceki konularda da ifade edildiği gibi bir hafıza adresinin değerini tutarlar.  Pointerların tanımlandıkları tip gösterdikleri yerde bulunan veri tipi ile  doğrudan alakalıdır. Aşağıdaki örnek program pointerların tipleri ile  gösterdikleri veriler arasındaki ilişkiyi net bir şekilde ortaya koymaktadır. <strong></strong></p>
+                <p>#include  &lt;iostream.h&gt;</p>
+                <p>main()</p>
+                <p>{</p>
+                <p>int  i= 5; </p>
+                <p>double  d = 1213; </p>
+                <p>int  *pInt = &amp;i </p>
+                <p>cout&gt;&gt;  &quot;int i değişkenin değeri i = &quot;&gt;&gt; i&gt;&gt;endl; </p>
+                <p>cout&gt;&gt;  &quot;int i değişkenin değeri i = *pInt = &quot;&gt;&gt; *pInt&gt;&gt;endl; </p>
+                <p>cout&gt;&gt;  &quot;double d değişkenin değeri d = &quot;&gt;&gt; d&gt;&gt;endl; </p>
+                <p>pInt  = (int *)&amp;d </p>
+                <p>cout&gt;&gt;  &quot;double d değişkenin değeri d = *pInt = &quot;&gt;&gt; *pInt&gt;&gt;endl; </p>
+                <p>cout&gt;&gt;  &quot;double d değişkenin değeri d = *(double *)pInt = &quot;&gt;&gt; *(double  *)pInt&gt;&gt;endl; </p>
+                <p>};</p>
+                <p>Yukarıdaki  programda öncelikle int, double ve int pointer tiplerinde birer tane değişken  tanımlanıyor. pInt int pointer değişkenine i değişkenin adresi atanıyor. Sırası  ile i değişkeninin değeri ile pInt değişkenin gösterdiği adresteki değer ekrana  yazdırılıyor. pInt değişkeni int bir pointer olarak tanımlandı ve aksi  belirtilmediği için derleyici pInt değişkenin dösterdiği yerde bir int değer  bulunduğunu kabul edip pointer değişkeninin gösterdiği adresten itibaren bir  int 'in uzunluğundaki hafıza bloğunun içindeki değeri int 'e çevirir. <br />
+                  Daha  sonraki satırlarda pInt değişkenine double tipindeki t değişkeninin adresi  atanıyor. (Bu işlemi yaparken derleyiciye d double değişkenin adresinin bir int  değişkenin adresi olduğunu bildirerek hata vermesinin engelliyoruz. Artık  mesuliyeti tamamen üzerimize almış durumdayız.) <br />
+                  Ekrana  sırası ile d değişkenin, pInt değişkenini gösterdiği adresteki değeri ve pInt  değişkenin gösterdiği adresteki double değişkenin değerleri sırası ile  yazdırılıyor. <br />
+  &nbsp;Aşağıdaki  ekran çıktısında da görüldüğü gibi pInt değişkenin d değişkenin adresini  göstermesine rağmen derleyiciyi uyarmadığımız için derleyici pInt in gösterdiği  adresten itibaren bir int boyutu kadarlık alandaki değeri int 'e çevirir. d  değişkenin içerdiği değerin hafızadaki gösteriminde bizim değerlendirdiğimiz  kısmında 0 değeri bulunuyormuş. pInt değişkeni d değişkenin adresigi gösteriyor  dolayısıyla gösterdiği adresteki değerin değişkenin içindeki değer ile aynı  olmalı gibi bir yorum yapılabilir <br />
+                  Pointer  aritmetiği konusunda da belirttiğimiz gibi derleyici pointerlar üzerinde işlem  yaparken değişkenin tip bilgisinden yararlanıyor. Yukarıda int int tipindeki  bir pointer'a double tipinde bir değişkenin adresini atarken yaptığımız gibi  derleyici tekrar kandırıp sen int tipinde bir pointersın fakat gösterdiğin  adres bir double 'ın adresi ona göre davran diye biliriz. Aşağıdaki ekran  çıktısında da görüldüğü gibi pInt değişkenini double pointer' a cast edip  ekrana yazdırdığımızda doğru değeri yazıyor. </p>
+                <p>int  i değişkenin değeri i = 5</p>
+                <p>int  i değişkenin değeri i = *pInt = 5</p>
+                <p>double  d değişkenin değeri d = 1213</p>
+                <p>double  d değişkenin değeri d = *pInt = 0</p>
+                <p>double  d değişkenin değeri d = *(double *)pInt = 1213</p>
+                <p><strong>Fonksiyonları Referans İle Çağırılması </strong></p>
+                <p>Fonksiyonlara  üç değişik şekilde parametre geçilebilir. <strong></strong><br />
+                  Değer  geçilerek (Call By Value), referans parametreleri ile referans geçerek veya  pointer parametreler ile referans geçerek. Bizi burada ilgilendiren pointer tipinde  referans geçilmesi ve değer geçerek parametre yollama yöntemi ile arasındaki  fark. <br />
+                  Aşağıdaki  program her iki yöntemin de kullanımını göstermektedir. </p>
+                <p>include  &lt;iostream.h&gt;</p>
+                <p>void  DegerIleCagirma(int parametre) <br />
+                  {</p>
+                <p>parametre  = 8; </p>
+                <p>}</p>
+                <p>void  PointerReferansIleCagirma(int* parametre) </p>
+                <p>{</p>
+                <p>*parametre  = 8; </p>
+                <p>}</p>
+                <p>&nbsp;</p>
+                <p>main()</p>
+                <p>{</p>
+                <p>int  i = 100; </p>
+                <p>cout&gt;&gt;  &quot;i = &quot; &gt;&gt; i &gt;&gt; endl; </p>
+                <p>DegerIleCagirma(i); </p>
+                <p>cout&gt;&gt;  &quot;DegerIleCagirma(i) fonksiyonundan sonra i = &quot; &gt;&gt; i &gt;&gt;  endl; </p>
+                <p>PointerReferansIleCagirma(&amp;i); </p>
+                <p>cout&gt;&gt;  &quot;PointerRefreransIleCagirma(i) fonksiyonundan sonra i = &quot; &gt;&gt; i  &gt;&gt; endl; </p>
+                <p>}</p>
+                <p><strong>&nbsp;</strong></p>
+                <p><strong>&nbsp;</strong></p>
+                <p><strong>Örnek </strong></p>
+                <p>Programda  main fonksiyonundan başka iki fonksiyon daha bulunmakta. . DegerIleCagirma  fonksiyonu parametre olarak bir int alır . Bu çağırım şeklinde derleyici  parametrenin otomatik olarak yerel bir kopyasını çıkartır ve parametrenin  değerinin atar. Fonksiyon içinde parametre üzerinde yapılan işlemler aslında  yerel kopya üzerinde gerçekleştirilir. Foksiyondan çıkılırken tüm yerel  değişkenler yok edildiği için parametreler üzerinde yaptığımız değişiklikler  yok olur. Diğer fonksiyon ise PointerReferansIleCagirma parametre olarak int  tipinde bir pointer alır. Bu fonksiyon çağırıldığında integer pointer tipinde  yerel bir değişken oluşturulur ve parametere olarak geçilen değişken adresi bu  yerel değişkene atanır.Fonksiyon çıkışında yerel değişkenlerin yokedilmesine  karşın yaptığımız değişiklik kaybolmamış olur.Fonksiyon içinde yerel değişkenin  gösterdiği hafıza bölgesine 8 değeri atanır. Programın ekran çıktısı aşağıdaki </p>
+                <p>i = 100</p>
+                <p>DegerIleCagirma(i)  fonksiyonundan sonra i = 100</p>
+                <p>PointerRefreransIleCagirma(i)  fonksiyonundan sonra i = 8</p>
+                <p>&nbsp;Fonksiyonların  pointer referans ile çağırılması çok büyük veri yapılarının foksiyonlara  parametre olarak geçilmesi gerektiğinde oldukça büyük avantajlar sağlar.  Aşağıdaki program parçasını ele alalım. Kartvizit yapısı 337 byte  büyüklüğündedir. F1 ve F2 fonksiyonlarının aynı işi yapan iki farklı fonksiyon  olduğunu varsayalım. F2 fonksiyonu F1 fonksiyonundan daha hızlı çalışır? Neden  ? F1 fonksiyonu cağırıldığında Kartvizit tipindeki parametrenin bir kopyası  yaratılır ve 337 byte’lık bilgi bu yeni yapıya kopyalanır. Halbuki F2  fonksiyonu çağrıldığında Kartvizit pointer tipinde bir parametre yaratılır ve  sadece parametere olarak geçilen yapının adresi kopyalanır. Bu adres bilgisinin  büyüklüğü kullanılan hafıza modeline göre değişir fakat her durumda 337 byte’tan  çok ufaktır. </p>
+                <p>struct  Kartvizit{</p>
+                <p>char  ad[30]; </p>
+                <p>char  soyad[30]; </p>
+                <p>char  adres[255]; </p>
+                <p>char  evTel[11]; </p>
+                <p>char  isTel[11]; </p>
+                <p>&nbsp;</p>
+                <p>void  F1(Kartvizit kart) </p>
+                <p>{</p>
+                <p>……….</p>
+                <p>}</p>
+                <p>void  F2(Kartvizit *kart) </p>
+                <p>{</p>
+                <p>……….</p>
+                <p>}<br />
+                  <strong>Fonksiyon Pointerlar</strong></p>
+                <p>Foksiyon  pointerlar genellikle geneleştirilmiş algoritmalar elde etmek için  kullanılırlar. Mesala sıralama yapan bir fonksiyon yazdığımızı düşünelim. Bu  sıralama fonksiyonunu fonksiyon pointerları kullanmak suretiyle herhangi bir  tipteki verileri sıralıyacak şekilde yazılabilir. <br />
+                  Sıkça  kullanıldıkları diğer bir alan ise menülerdir. Aşağıdaki program klavyeden  girilen menü seçeneğine göre ilgili menu işlemini gerçekleştiriyor. Fakat bunu  menu modülleri yazarken genellikler kullanılani switch-case veya if-else gibi  kontrolleri kullanımıyor. Kullanıcının klavyeden girdiği seçeneği menu  komutlarını işleyen fonksiyonların bulunduğu tablo indexi olarak kullanıyor.  Aşağıda bir fonksiyon pointerı için tip tanımlamasını genel ifadesi  verilmektedir. <br />
+                  typedef  geri_döndürdüğü_değer_tipi (*tip_ismi)(parametre_Listesi); </p>
+                <p>Menüler  için fonksiyon pointerları dizi kullanıdığımızda çalışma zamanında (run time)  dizideki adres değerlerini değiştirmek suretiyle menüleri düzenliyebiliriz </p>
+                <p>#include  &lt;iostream.h&gt;</p>
+                <p>#include  &lt;conio.h&gt;</p>
+                <p>struct  Ogrenci{</p>
+                <p>char  Ad[20];</p>
+                <p>char  Soyad[20];</p>
+                <p>char  OkulNo[20];</p>
+                <p>char  Adres[255];</p>
+                <p>char  KayitTarihi[11];</p>
+                <p>};</p>
+                <p>void  EkranaYaz(Ogrenci &amp;ogr)</p>
+                <p>{</p>
+                <p>&nbsp;&nbsp;&nbsp;  cout&gt;&gt;&quot;Ad:&quot;&gt;&gt;ogr.Ad&gt;&gt;endl;</p>
+                <p>&nbsp;&nbsp;&nbsp;  cout&gt;&gt;&quot;Soyad:&quot;&gt;&gt;ogr.Soyad&gt;&gt;endl;</p>
+                <p>&nbsp;&nbsp;&nbsp;  cout&gt;&gt;&quot;OkulNo:&quot;&gt;&gt;ogr.OkulNo&gt;&gt;endl<br />
+  &nbsp;&nbsp;&nbsp;  cout&gt;&gt;&quot;Adres:&quot;&gt;&gt;ogr.Adres&gt;&gt;endl;</p>
+                <p>cout&gt;&gt;&quot;KayitTarihi&quot;&gt;&gt;ogr.KayitTarihi&gt;&gt;endl;</p>
+                <p>}</p>
+                <p>void  Oku(Ogrenci &amp;ogr)</p>
+                <p>{</p>
+                <p>&nbsp;&nbsp;&nbsp;  cout&gt;&gt;&quot;Ad:&quot;;</p>
+                <p>&nbsp;&nbsp;&nbsp;  cin&lt;&lt;ogr.Ad;</p>
+                <p>&nbsp;&nbsp;&nbsp;  cout&gt;&gt;&quot;Soyad:&quot;;</p>
+                <p>&nbsp;&nbsp;&nbsp;  cin&lt;&lt;ogr.Soyad; </p>
+                <p>&nbsp;&nbsp;&nbsp;  cout&gt;&gt;&quot;OkulNo:&quot;;</p>
+                <p>&nbsp;&nbsp;&nbsp;  cin&lt;&lt;ogr.OkulNo;</p>
+                <p>&nbsp;&nbsp;&nbsp;  cout&gt;&gt;&quot;Adres:&quot;;</p>
+                <p>&nbsp;&nbsp;&nbsp;  cin&lt;&lt;ogr.Adres;</p>
+                <p>&nbsp;&nbsp;&nbsp;  cout&gt;&gt;&quot;KayitTarihi&quot;;</p>
+                <p>&nbsp;&nbsp;&nbsp;  cin&lt;&lt;ogr.KayitTarihi;</p>
+                <p>}</p>
+                <p>typedef  void (*MenuFuncPointer)(Ogrenci &amp;);</p>
+                <p>MenuFuncPointer  islemler[2]; </p>
+                <p>void  Menu()</p>
+                <p>{</p>
+                <p>&nbsp;&nbsp;&nbsp;  clrscr();</p>
+                <p>&nbsp;&nbsp;&nbsp;  cout&gt;&gt; &quot;0-) Oku&quot;&gt;&gt; endl;</p>
+                <p>&nbsp;&nbsp;&nbsp;  cout&gt;&gt; &quot;1-) Yaz&quot;&gt;&gt; endl;</p>
+                <p>&nbsp;&nbsp;&nbsp;  cout&gt;&gt;endl;</p>
+                <p>&nbsp;&nbsp;&nbsp;  cout&gt;&gt; &quot;2-) Çıkış&quot;&gt;&gt; endl;</p>
+                <p>}</p>
+                <p>void  main()</p>
+                <p>{</p>
+                <p>&nbsp;&nbsp;&nbsp;  islemler[0] = Oku;&nbsp;&nbsp;&nbsp; </p>
+                <p>&nbsp;&nbsp;&nbsp;  islemler[1] = EkranaYaz;&nbsp;&nbsp;&nbsp; </p>
+                <p>&nbsp;&nbsp;&nbsp;  Ogrenci temp;</p>
+                <p>&nbsp;&nbsp;&nbsp;  int secim = 4;</p>
+                <p>&nbsp;&nbsp;&nbsp;  while (secim != 2)</p>
+                <p>&nbsp;&nbsp;&nbsp;  {</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Menu();</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  cin&lt;&lt; secim;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  if (secim &lt; 2 ) (*islemler[secim])(temp);</p>
+                <p>&nbsp;&nbsp;&nbsp;  }</p>
+                <p>}</p>
+                <p>Yukarıdaki  örnek programda geriye değer döndürmeyen ve Ogrenci yapısı referansı tipinde  parametre alan fonksiyonlar için MenuFuncPointer isminde bir fonksiyon pointer  tipi tanımlanıyor. Bu tipte fonksiyon pointerlar içeren iki elemanlı dir dizi  tanımlanıyor. Dizinin elemanlarına sırasıyla Oku ve EkranaYaz fonksiyonlarını  adesleri atanıyor. Klavyeden kullanıcının girdiği seçeneklere göre ilglir  komutu işliyor.</p>
+<h1>&nbsp;</h1>
+<p class="additional"></p></font>
+      </div>
+    </div>
+    <!-- end main -->
+    <!-- footer -->
+    <div id="footer">
+    <div id="left_footer"> <b>C++</b></div>
+    <div id="right_footer">
+
+<!-- Please do not change or delete this link. Read the license! Thanks. :-) -->
+Design by <a href="http://neozdemir.blogspot.com.tr/" title="Website Design"><strong>Neslihan Özdemir</strong></a>
+
+    </div>
+</div>
+    <!-- end footer -->
+</body>
+</html>

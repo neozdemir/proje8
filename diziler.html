@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<!-- header -->
+    <div id="header">
+    <div id="menu">
+       <div id="menu_list"></div>
+    </div>
+</div>
+      <div id="logo">
+      <div id="logo_text">
+        <h1><a href="index.html"><img src="images/cplusplus.gif" width="163" height="74" alt="cplusplus" /></a></h1>
+      </div>
+    </div>
+    <!--end header -->
+    <!-- main -->
+    <div id="main">
+          <div id="sidebar">
+          	
+            <div class="item"></div>
+            <div class="item">
+              <blockquote>
+           	    <p><a href="index.html">ANASAYFA</a></p>
+       	      </blockquote>
+              <p>&nbsp;</p>
+              <ul>
+                <li><strong><a href="index.html">         TARİHÇE</a></strong></li>
+                <li><strong><a href="cgiris.html">      C++ GİRİŞ</a></strong></li>
+                <li><strong><a href="cavant.html">C++ AVANTAJLARI</a></strong></li>
+               
+                <li><strong><a href="operatorler.html">OPERATÖRLER</a></strong></li>
+                <li><strong><a href="pointerlar.html">POİNTERLAR</a></strong></li>
+                <li><strong><a href="diziler.html">DİZİLER</a></strong></li>
+                <li><strong><a href="fonksiyonlar.html">FONKSİYONLAR</a></strong></li>
+                <li><strong><a href="donguler.html">DÖNGÜLER</a></li>
+              </ul>
+              <dl>
+                <dt></dt>
+              </dl>
+            <span class="description"><a href="index.html"><img src="images/computer.jpg" width="200" height="125" alt="kaynaklar" /></a></span>            </div>
+           
+          </div>
+          <div id="text" >
+               
+                <h1><strong>Dİzİler</strong></h1>
+                <p>Diziler  aynı isim ile erişilen değişkenler kümesi olarak adlandırılabilir. Dizinin her  elemanına index bilgisi ile ulaşılır. Genel olarak bir dizi tanımlaması  aşağıdaki gibidir. <br />
+                  Tip  dizi_ismi[boyut1][boyut2]….[boyutN] Tip Kullanıcı tanımlı veya standart C++  veri tiplerinden bir. <br />
+                  dizi_ismi  C++ değişken tanımlama kurallarına uygun olan herhangi bir değişken ismi <br />
+                  boyut  &nbsp;&nbsp;&nbsp;Dizinin kaç eleman içereceği <br />
+  &nbsp;C’deki  dizi kavramı diğer dillerdekinden biraz farklıdır. Örneğin basic de <br />
+                  Dim  I as integer <br />
+                  Input(&quot;Bir  sayi giriniz&quot;) ,I <br />
+                  Dim  d(I) as integer &nbsp;&nbsp;&nbsp;Şeklinde bir program kodu gayet doğaldır.  Yukarıdaki programda d dizisinin boyutu dışarıdan girilir. Dizinin boyutu  çalışma zamanında belirlenir. Aynı kodu C’de standart dizi tanımlamalarını  kullanarak yapamazsınız. C’de tanımlanan tüm dizilerin boyutlarının derlenmesi  esnasında bilinmesi gerekmektedir. Derleyici diziler için statik olarak  hafızadan yer ayırır. C’ de boyutu önceden bilinmeyen diziler tanımlamak mümkün  değil mi? sorusu gündeme gelebilir. <br />
+            Mümkündür.  Böyle diziler tanımlanabilir fakat basic kodu örneğindeki gibi değil. Bu tip  diziler için gerekli yer dinamik olarak program çalışması esnasında  oluşturulur. Bu yönteme daha sonra deyineceğiz. </p>
+                <p>Dizi  tanımlarında belirtilen boyut dizinin kaç elemanlı olacağını ifade eder. Bazı  dillerdeki gibi son elemanın indisini belirtmez. Aşağıda 5 elemanlı bir int  dizi tanımlaması verilmiştir. Geçerli olan son dizi elemanı iArray[4]’ 'tür.  iArray[5] ifadesi dizinin ardındaki ilk hafıza elemanını gösterir. int  iArray[5]; C’de dizilerin boyut kontrolü yoktur. Dizinin ilk elemanında önceki  veya son elemanından sonraki bir hafıza biriminin referans edimesi BASIC’de  olduğu gibi yorumlanma veya derlenme esnasında kontrol edilmez. Bu kontrol  programcıya bırakılmıştır. </p>
+                <p>Aşağıda  örnek programda ilk giren ilk çıkar mantığıyla çalışan yığın veri yapısı dizi  kullanarak gerçekleştirilmiştir. </p>
+                <p>#include  &lt;iostream.h&gt;</p>
+                <p>#include  &lt;stdlib.h&gt;</p>
+                <p>#include  &lt;conio.h&gt;</p>
+                <p>#include  &lt;stdio.h&gt;</p>
+                <p>const  int Max_StackLen = 100; // Yy?ynda buluna bilecek max eleman sayysy</p>
+                <p>int  intStack[Max_StackLen]; // Yy?yn olarak kullanylacak dizi</p>
+                <p>int  itemsInStack = 0; // Yy?ynda bulunan eleman sayysy</p>
+                <p>&nbsp;</p>
+                <p>int  Menu();</p>
+                <p>int  Push(int number);</p>
+                <p>int  Pop(int &amp;number);</p>
+                <p>main()</p>
+                <p>  {</p>
+                <p>  while(1)</p>
+                <p>  {</p>
+                <p>  switch  (Menu())</p>
+                <p>  {        </p>
+                <p>  case 1: // Yeni bir sayı ekle              </p>
+                <p>  {</p>
+                <p>   int  numberToAdd;           </p>
+                <p>        cout&gt;&gt; &quot;Eklenecek Sayiyi  Giriniz&quot;;</p>
+                <p>        cin&lt;&lt;numberToAdd;</p>
+                <p>        if (!Push(numberToAdd))</p>
+                <p>        cout&gt;&gt; &quot;Yigin  Dolu&quot;&gt;&gt;endl;        </p>
+                <p>        }</p>
+                <p>        break;        </p>
+                <p>     <br />
+                  case 2: // Tepedeki elemany çykart        </p>
+                <p>        {</p>
+                <p>        int popedNumber;</p>
+                <p>        if (!Pop(popedNumber))              </p>
+                <p>        cout&gt;&gt; &quot;Yigin  Bos&quot;&gt;&gt;endl;</p>
+                <p>        else             </p>
+                <p>        cout &gt;&gt; &quot;Çykarylan Eleman  :&quot;&gt;&gt;popedNumber&gt;&gt;endl;</p>
+                <p>        }</p>
+                <p>        break;</p>
+                <p>        case 3: // Listele</p>
+                <p>        {</p>
+                <p>        for (int i = itemsInStack - 1; i &gt;= 0 ;  i--)</p>
+                <p>        cout&gt;&gt;i&gt;&gt;&quot;. Pozisyon dayi  Sayi :&quot;&gt;&gt;intStack[i]&gt;&gt;endl;             </p>
+                <p>        }</p>
+                <p>        break;   </p>
+                <p>        case 4: // Çyky? </p>
+                <p>        exit(0);</p>
+                <p>       break;</p>
+                <p>       } </p>
+                <p> }</p>
+                <p> return 0;</p>
+                <p>}</p>
+                <p>int  Menu()</p>
+                <p>{ </p>
+                <p>int  choice = 0;</p>
+                <p>while  (choice &gt;1 || choice &lt; 4)</p>
+                <p>{   </p>
+                <p>cout  &gt;&gt; &quot;1-) Yeni Sayy Ekle&quot;&gt;&gt;endl;</p>
+                <p>cout  &gt;&gt; &quot;2-) Sayy Çykart&quot;&gt;&gt;endl;      </p>
+                <p>cout  &gt;&gt; &quot;3-) Yy?un'y Listele&quot;&gt;&gt;endl;</p>
+                <p>cout  &gt;&gt; &quot;4-) Çyky?&quot;&gt;&gt;endl&gt;&gt;endl;      </p>
+                <p>cout  &gt;&gt; &quot; Seçenek :&quot;;</p>
+                <p>cout.flush();      </p>
+                <p>cin&lt;&lt;choice;   </p>
+                <p>}</p>
+                <p>cout&gt;&gt;endl;   </p>
+                <p>cout.flush();</p>
+                <p>return  choice;</p>
+                <p>}</p>
+                <p> int Push(int number)</p>
+                <p> {</p>
+                <p> // Yy?ynda yer olup olmady?yny kontrol et.</p>
+                <p>  if  (itemsInStack == Max_StackLen)      </p>
+                <p>  return 0;</p>
+                <p>  intStack[itemsInStack] = number;   </p>
+                <p>   itemsInStack++;   </p>
+                <p>   return -1;</p>
+                <p>   }</p>
+                <p>&nbsp;</p>
+                <p>   int  Pop(int &amp;number)</p>
+                <p>  {</p>
+                <p>  //  Yy?yn bo? mu diye kontrol et.</p>
+                <p>  if  (itemsInStack == 0)     </p>
+                <p>  return 0;   </p>
+                <p>  itemsInStack--;</p>
+                <p>  number = intStack[itemsInStack];   </p>
+                <p>  return -1;</p>
+                <p>  }</p>
+                <p>C/C++  dillerinde derleyici tarafından dizlere erişimde boyut kontrolu yapılmamaktadır </p>
+                <p>Peki  ilk giren ilk çıkar mantığıyla çalışan Kuyruk veri yapısını diziler  aracılığıyla nasıl gerçekleştirebiliriz? Çözümlerinizi bekliyoruz.Cevaplarınızı  cpp@programlama.com adresine yollayabilirsiniz.</p>
+                <p><strong>Diziler İle Stringler Arasındaki İlişki </strong></p>
+                <p>C/C++’da  stringler son elemanları “null terninator” ( ‘\0’ )’) olan belirli uzunluktaki  karakter dizileri olarak tanımlanır. Tanımdan da anlaşılacağı üzere Stringler  ile bir boyutlu diziler arasında çok sıkı bir bağ vardır. C dilinde stringler  için bir veri tipi tanımlanmamasına karşın string sabitleri için bir veri tipi  vardır. Bir string sabiti çift tırnak arasında verilmiş karakterler listesidir. </p>
+                <p><strong>&quot;Örnek bir string &quot; </strong></p>
+                <p>String  sabitlerinin sonuna null terminator eklenmesine gerek yoktur. C derleyicisi  bizim yerimize otomatik olarak bu işi yapar. </p>
+                <p>char  str[] = &quot;Örnek bir string&quot;; <br />
+                  char  str[17] = &quot;Örnek bir string&quot;; </p>
+                <p>Yukarıdaki  değişken tanımlamalarının her ikisi de geçerlidir. Birinci tanımlamada  derleyici str str isminde “Örnek bir string” ifadesini tutabilecek kadar uzunluğa  sahip karakter dizisi tanımlar. İkinci tanımlamada ise 17 elamandan oluşan bir  karakter dizisi tanımlar ve bu diziye “Örnek bir string” ifadesini atar. İki  tanımlamada ilk bakışta aynı işi gerçekleştiriyormuş gibi gözükebilir fakat  işleyiş şekillerinde ufak bir nüans farkı vardır. Birinci kulanım şeklinde  verdiğiniz string'i tutmnak için gerekli olan yerin uzunluğunu siz  hesaplamıyorsunuz. Dolayısıyla ilerde bir şekilde bu string’i değiştirmeniz  gerektiğinde ayrılması gereken yerin doğru olarak hesaplanıp hesaplanmadığını  kontrol etmeniz gerekmez. Kısacası bir riske girmiyorsunuz kontrolu derleyiciye  bırakıyorsunuz. Fakat ikinci tanımlamada aynı durum söz konusu değildir. Eğer  ki tanımlamada verilen string 17 karakterden daha fazla yere ihtiyaç duysaydı  veya ilerde string'i değiştirip yerine daha uzun bir string girdiğinizde  derleyici hata verecekti. </p>
+                <p>char  str[3] = &quot;123456&quot;; <br />
+                  Örneğin  derleyici yukarıdaki tanımlama ile karşılaştığında hata verecektir. </p>
+                <p>Sizi  ayırmanız gereken yerin boyutunu doğru girmeye zorlayacaktır. <br />
+                  C  programa dili stringler üzerinde işlem yapabilmek için çok çeşitli foksiyonlar  içermektedir. Bu fonksiyonların prototipleri string.h header dosyasında  bulunmaktadır <br />
+                  Programlarınızda  mümkün sihirli rakamlar kullanmaktan kaçının. Sihirli rakamlar yerine #define  ile tanımlamış ifadeler veya sabitler kullanın. Bu programınızın anlaşıla  iblirliğini arttırırken bakımını da kolaylaştırır. </p>
+                <p>char  mesaj[255]; </p>
+                <p>Yukarıdaki  program satırı yerine aşağıdaki kodu kullanın </p>
+                <p>const  int Max_MesajUzunlugu = 255; <br />
+                  char  mesaj[Max_MesajUzunlugu];<br />
+                  Dizilerin  Fonksiyonlara Parametre Olarak Geçilmesi &lt;Resim&gt;&lt;Resim&gt;<br />
+                  C  dilinde diziler fonksiyonlara daima referans olarak geçilirler. Diğer değişken  tiplerinde olduğu gibi değer ile çağırma yöntemi diziler için kullanılamaz.  Aşağıda fonksiyonlara dizilerin parametre olarak geçilme şekillerinden  bazılarını inceliyeceğiz. <br />
+                  Print(char  dizi[]); <br />
+                  Yukarıdaki  tanımlama Print fonksiyonuna bir karakter dizinin referansının (Bir string’in  başlangıç adresinin) geçileceğinin anlatır.Tanımlamada parametre olarak geçilen  dizinin boyutu hakkında bir bilgi bulunmamaktadır. Bir boyutlu bir dizini  referansını elde etmek için dizinin boyutunun bilinmesine gerek yoktur. <br />
+                  İkinci  bir çağırma şekli ise direk olarak dizinin tanımlandığı tipte bir pointer’ı  fonksiyona parametre olarak geçileceğini ifade eder.. Aşağıda bu kullanım şekli  örneklenmektedir. <br />
+                  Print(char  *diziBaslangici); &nbsp;&nbsp;&nbsp;Bu kullanım şeklinde ise fonksiyonumuz bir  char pointer alacak şekilde tanımlanmıştır. Bu tanımlama şeklide yukarıdaki ile  aynı işlevi gerçekleştirmekterdir. <br />
+                  Print(char  dizi[35]); <br />
+                  Yukarıdaki  tanımlama şekli ise yine Print fonksiyonun char bir dizinin referansını  parametre olarak alacağını belirtmektedir. Dizinin boyut bilgisi derleyici  tarafından göz ardı edilir çünkü yukarıda da belirttiğimiz gibi dizinin  başlangıcına ait bir referans elde etmek için dizinin boyutunun bilinmesine  gerek yoktur. Bu bilgi ancak kodu inceleyen programcıya bilgi verebilir. <br />
+                  Dizileri  fonksiyonlara adreslerinin geçilmesi fonksiyon içinde dizi üzerinde yapılcak  değişiklerin dizini içeriğini değiştireceğinin unutmamak gerekir. Yapılan  değişiklikler yerle bir dizi kopyası üzerinde gerçekleştirilmez. Orjinal dizi  değişir.</p>
+                <p><strong>&nbsp;</strong></p>
+                <p><strong>Diziler İle Pointerlar Arasındaki İlişki </strong></p>
+                <p>C  programlama dilinde pointerlar ile diziler arasında çok yakın bir ilişki  vardır. Herhangi bir dizinin ismi dizinin ilk elemanına ait bir pointer olarak  tanımlanır. <br />
+                  int  main(int argc, char **argv) </p>
+                <p>{<br />
+                  int  array[5]; <br />
+                  cout&gt;&gt;&quot;Bir  değer atanmadan önce array[0] = &quot;&gt;&gt; array[0]&gt;&gt;endl; </p>
+                <p>*array  = 2; </p>
+                <p>cout&gt;&gt;&quot;Değer  atanma işleminden sonra array[0] = &quot;&gt;&gt; array [0]&gt;&gt;endl; </p>
+                <p>cout&gt;&gt;&quot;array[0]'in  adresi (&amp;array[0]) =&quot; &gt;&gt;&amp; array [0]&gt;&gt;endl; </p>
+                <p>cout&gt;&gt;&quot;array'in  değeri array =&quot; &gt;&gt; array &gt;&gt;endl; </p>
+                <p>getch();</p>
+                <p>return  0; </p>
+                <p>}</p>
+                <p>Yukarıdaki  örnek program diziler ile pointerlar arasındaki ilişkiyi açık bir şekilde  göstermektedir. Kodu basamak basamak incelersek array isminde 5 elemandan  oluşan bir int dizi tanımlanıyor. Bu dizinin ilk elemanının değeri ekrana  yazdırılıyor. Sonraki adımda ise array Yukarıdaki örnek program diziler ile  pointerlar arasındaki ilişkiyi açık bir şekilde göstermektedir. Kodu basamak  basamak incelersek array isminde 5 elemandan oluşan bir int dizi tanımlanıyor.  Bu dizinin ilk elemanının değeri ekrana yazdırılıyor. Sonraki adımda ise array  değişkeninin gösterdiği adrese 2 değeri atanıyor ve array array dizisinin ilk  elemanı tekrar ekrana yazdırılıyor. <br />
+                  Aşağıdaki  ekran çıktısına bakarsak ilk eşitleme işleminden önce array[0] ]’ın 0 değerine  sahipken dizini isminin gösterdiği adrese değer 2 atanmasında sonra array[0]  ]’ın değerinin 2 olduğunu görüyoruz. Buradan da anlaşılacağı üzere array  ifadesi array dizisinin ilk elemanını göstermektedir. Sonraki satırlarda ise  dizinin ilk elemanının ve dizinin ismimin gösterdiği adresler sırası ile ekrana  yazdırılmaktadır. </p>
+                <p>&nbsp;</p>
+                <p>Bir  değer atanmadan önce array[0] = 0</p>
+                <p>Değer  atanma işleminden sonra array[0] = 2</p>
+                <p>array[0]'in  adresi (&amp;array[0]) =0066FDF0</p>
+                <p>array  'in değeri array =0066FDF0</p>
+                <p>Pointerlar  konusunda da söylediğimiz gibi bir pointer değişkenin değerinin arttırmak  suretiyle <br />
+                  pointer’ın  tanımlandığı tipteki bir sonraki elemanın adresine ulaşabiliriz. Diziler,  dizinini boyutu kadar elemanın dizinin başlangıç adresinden itibaren hafızada  ardışık oluşturulması şeklinde elde edilirler. Dizinin i. Elemanı i+1’inci  elemandan hemen önce gelmektedir. Pointer aritmetiği suretiyle dizi  elemanlarınları üzerinde gezine biliriz. Aşağıdaki örnek programda 5 boyutlu  bir int dizisinin elemanları hem dizi değişkeninin üzerinde dizi index’i aracılığıyla  hem de dizinin başlangıç adresini gösteren bir pointer değişkenine çeşitli  artımlar verilmek suretiyle ekrana yazdırılmaktadır. <br />
+                  int  main(int argc, char **argv) </p>
+                <p>{</p>
+                <p>int  array[5] = {0,1,2,3,4};</p>
+                <p>int  *pInt = array; </p>
+                <p>//  Dizi elemanlaryna de?er</p>
+                <p>for  (int i = 0;i &lt; 5; i++)</p>
+                <p>cout&gt;&gt;&quot;array[&quot;&gt;&gt;i&gt;&gt;&quot;]=&quot;&gt;&gt;array[i]&gt;&gt;endl; </p>
+                <p>cout&gt;&gt;&quot;Pointer  değişken aracılığıyla dizi üzerinde dolaşılması&quot;&gt;&gt;endl; </p>
+                <p>for  (int i = 0;i &lt; 5; i++)</p>
+                <p>cout&gt;&gt;&quot;*(pInt  + &quot;&gt;&gt;i&gt;&gt;&quot;)=&quot;&gt;&gt;*(pInt + i)&gt;&gt;endl; </p>
+                <p>getch();</p>
+                <p>return  0; </p>
+                <p>}</p>
+                <p>array[0]=0</p>
+                <p>array[1]=1</p>
+                <p>array[2]=2</p>
+                <p>array[3]=3</p>
+                <p>array[4]=4</p>
+                <p>Pointer  değişken aracılığıyla dizi üzerinde dolaşılması</p>
+                <p>*(pInt  + 0)=0</p>
+                <p>*(pInt  + 1)=1</p>
+                <p>*(pInt  + 2)=2</p>
+                <p>*(pInt  + 3)=3</p>
+                <p>*(pInt  + 4)=4</p>
+                <p><strong>Çok Boyutlu Diziler </strong></p>
+                <p>Bu  bölümde birden çok boyutu olan dizileri ele alacağız. Çok boyutlu diziler en  basit haliyle iki boyutlu diziler olarak karşımıza çıkar. İki boyutlu dizileri;  bir boyutlu dizilerden oluşan bir boyutlu diziler olarak da ifade edilebilir. <strong></strong><br />
+                  char  strArray[30][255]; <br />
+                  Yukarıdaki  komut satırında herbiri 255 byte uzunluğunda 30 stringden oluşan strArray  isiminde bir dizinin tanımı yapılmıştır Yukarıdaki ifade aşağıdaki tanımlamalar  ile eşdeğerdir. <br />
+                  typedef  char myString[255]. NewType; <br />
+                  newType  strArray[30]; <br />
+                  Çok  boyutlu dizilerde her bir boyut dizi elamnalrına erişlimde ekstra yük  getirecektir. Yani aynı boyutlarda çok boyutlu bir dizini elemanlarına erişmek  tek boyutlu diziye göre daha yavaş olacaktır. <br />
+                  Çok  boyutlu dizlerini fonksiyonlara parametre olarak geçilmelerinde dizini her bşr  boyutunun beliritilmesi gerekmektidir. Sadece en soldaki indisi belirtmeme  şansına sahibiz. </p>
+                <p>double  dizi[12][13][14]; <br />
+                  Şeklinde  tanımlanmış bir diziyi parametre olarak alacak fonksiyonun prototipi aşagıdaki  gibi olacaktır. <br />
+                  bool  myFuntion(dizi[12][13][14]); <br />
+                  veya <br />
+                  bool  myFuntion(dizi[][13][14]);</p>
+<h1>&nbsp;</h1>
+<p>&nbsp;</p>
+<p class="additional">  </p>
+          </div>
+    </div>
+    <!-- end main -->
+    <!-- footer -->
+    <div id="footer">
+    <div id="left_footer"> <b> C++</b></div>
+    <div id="right_footer">
+
+<!-- Please do not change or delete this link. Read the license! Thanks. :-) -->
+Design by <a href="http://neozdemir.blogspot.com.tr/" title="Website Design"><strong>Neslihan Özdemir</strong></a>
+
+    </div>
+</div>
+    <!-- end footer -->
+</body>
+</html>

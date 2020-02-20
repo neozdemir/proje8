@@ -1,0 +1,673 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<!-- header -->
+    <div id="header">
+    <div id="menu">
+       <div id="menu_list"></div>
+    </div>
+</div>
+      <div id="logo">
+      <div id="logo_text">
+        <h1><a href="index.html"><img src="images/cplusplus.gif" width="163" height="74" alt="cplusplus" /></a></h1>
+      </div>
+    </div>
+    <!--end header -->
+    <!-- main -->
+    <div id="main">
+          <div id="sidebar">
+          
+            <div class="item"></div>
+            <div class="item"><span class="description"></span>
+           	<blockquote>
+           	  <p><a href="index.html">ANASAYFA</a></p>
+         	  </blockquote>
+            <p>&nbsp;</p>
+            <ul>
+              <li><strong><a href="index.html">TARİHÇE</a></strong></li>
+              <li><strong><a href="cgiris.html">C ++ GİRİŞ</a></strong></li>
+              <li><strong><a href="cavant.html">C++ AVANTAJLARI</a></strong></li>
+            
+              <li><strong><a href="operatorler.html">OPERATÖRLER</a></strong></li>
+              <li><strong><a href="pointerlar.html">POİNTERLAR</a></strong></li>
+              <li><strong><a href="diziler.html">DİZİLER</a></strong></li>
+              <li><strong><a href="fonksiyonlar.html">FONKSİYONLAR</a></strong></li>
+              <li><strong><a href="donguler.html">DÖNG</a></strong><a href="donguler.html">ÜLER</a></li>
+            </ul>
+            <dl>
+              </dl>
+            <p>&nbsp;</p>
+            <p><a href="index.html"><img src="images/computer.jpg" width="200" height="125" alt="kaynaklar" /></a></p>
+            </div>
+           
+          </div>
+          <div id="text" >
+		  <br>
+                <font size="2"><h1>OPERATÖRLER</h1>
+				 <br>
+                <p>Önce  matematikte operatörün ne olduğuna bakalım. Operatörler üzerinde işlem  yaptıkları bir veya birden fazla operandı belli kurallara göre işlerler.  Operand işleme maruz kalandır. <br />
+            Örneğin;  a + b 'de a ve b operand + ise operatördür. Matamatikte işlemler operatörler ve  operandlar ile anlatılır. </p>
+                <p>Bilgisayardada  yapılacak işlemleri belli operatörler tarafından gerçekleştirmekteyiz. </p>
+                <p><strong>Türleri: </strong></p>
+                <p>Operatörleri  kullanım alanlarına ve kullanımdaki yerlerine (syntaxlarına) göre iki ayrı  şekilde açıklamak mümkün iken, anlatımımızda kullanım türlerine göre  sınıflandıracağız ve syntaxların göre aldıkları isimleride her operatör altında  inceleyeceğiz. </p>
+                <p><strong>Kullanım Alanlarına göre operatörler:</strong></p>
+            <p>Aritmatiksel  operatörler + , - , * , / , % , ++ , -- <br />
+                  Karşılaştırma  operatörleri &lt; , &gt; , &lt;=, &gt;= , ==, != <br />
+                  Bit  bazında işlem yapan operatörler : &amp; , | , ^ , ~ , &lt;&lt; , &gt;&gt; <br />
+                  Eşitleme  operatörleri : = , += , -=, *= , /= , %= , &lt;&lt;=, &gt;&gt;=, &amp;=, |= ,  ^= <br />
+                  Mantıksal  Operatörler : ! , || , &amp;&amp; <br />
+                  Diğer  Operatörler :</p>
+                <p><strong>Aritmatik Operatörler </strong></p>
+                <p>&nbsp;&nbsp;<br />
+  &nbsp;Aritmatik  operatörler matamatiksel işlemlerde kullanılan operatörlerdir. Toplama,  çıkarma, çarpma , bölme, modül alma, ... <br />
+  &nbsp;&nbsp;&nbsp;Şimdi  bu operatörlere sıra ile göz atalım. <br />
+            Aritmatik  operatörlerin kullanımında dikkat edilecek hususlardan bir tanesi operatörün  kullandığı operandlar ve değerin atandığı operand aynı türden olursa  hassasiyetin korunacağı aksi taktirde sonucun doğru çıkmayabileceğidir. Bunu  bize çocukken öğrettikleri şekilde anlatacak olursak elmalarla armutlar  toplanmaz. </p>
+                <p><strong>Toplama Operatörü +</strong></p>
+                <p>&nbsp;Bu  operatör ile verilen iki veya daha fazla operand toplanabilir.Genel yazılışı  aşağıdaki gibidir <br />
+                  değişken1]  + [değişken2] <br />
+                  Eğer  bu iki değişkenin toplamı sonucunda oluşan değeri sonuç isimli bir değişkene  atamak istersek eşitleme operatörünüde kullanarak bu işlemi aşağıdaki gibi  yazabiliriz. <br />
+                  [sonuç]  = [değişken1] + [değişken2] <br />
+            Sonuç'u  tutacak olan değişken değişken1 ve değişken2 değişkenlerinin değerlerini  tutabilecek büyüklükte olmalıdır. Bu konu ile ilgili örneğimizi aşağıda  görebilirsiniz. Bu örneğin 32 bitlik bir platform için yazıldığına dikkat  ediniz. Veri tiplerinin maksimum ve minumum değerlerini görmek için buraya basınız. </p>
+                <p><strong>&nbsp;</strong></p>
+                <p><strong>Örnek 1: </strong><br />
+                  01  #include &quot;iostream.h&quot;</p>
+                <p>02</p>
+                <p>03  void main()</p>
+                <p>04 {</p>
+                <p>05    int sayi1 = 2000000000;</p>
+                <p>06    int sayi2 = 1500000000;</p>
+                <p>07    int sonuc = sayi1 + sayi2;</p>
+                <p>08    double sonuc2 = double(sayi1) +  double(sayi2);</p>
+                <p>09 </p>
+                <p>10    cout &lt;&lt; sonuc2 &lt;&lt; endl;</p>
+                <p>11    cout &lt;&lt; sayi1 + sayi2 &lt;&lt; endl;</p>
+                <p>12 }</p>
+                <p><strong>Örnek 1 Ekran Çıktısı : </strong><br />
+                  3.5e+009 <br />
+                  -794967296 </p>
+                <p><strong>Açıklama : (Örnek 1 için)</strong><br />
+  &nbsp;32  bitlik bir platformda int türünden en büyük sayı 2,147,483,647 olabileceğinden  sayi1 ve sayi2 nin toplamları bu değeri geçtiğnden dolayı sonucu tutacağımız  değişkenin fazladan 1 bite ihtiyacı vardır. Ancak int ile hafızada tutulan bu  alana sonuc büyük geldiğinden sadece sonucun yeterli bitleri int'e  aktarılabilmiştir. Bu da -794967296'ya denk gelmektedir. Böyle durumlarda  yapmamız gereken değişkenleri daha geniş alanlı bir yapıya aktarıp sonucuda bu  değeri tutabilecek bir değişkene aktarmaktır. sayi1, sayi2 ve sonuç16 bitlik  verilerdir. Ancak 3500000000 17 bitle gösterilebilir. Sonuç ise 16 bitlik  olduğundan bu değeri tutamaz. İşte bunun için sonuç2 32 bitlik double olarak  tanımlanmış ve 08. satırda sayi1 ve sayi2 de 32 bitlik olarak toplanıp  sonuç2'ye aktarilmiştir. Böylecene sonuç doğru olarak çıkabilmektedir <strong></strong></p>
+                <p><strong>Çıkarma Operatörü -:</strong> &nbsp;&nbsp;&nbsp;Bu operatör ile verilen iki operand birbirinden  çıkarılabilir. Genel yazılışı aşağıdaki gibidir. <br />
+                  [değişken1]  - [değişken2] <br />
+  &nbsp;&nbsp;&nbsp;Eğer  bu iki değişkenin çıkarılması sonucunda oluşan değeri sonuç isimli bir  değişkene atamak istersek eşitleme operatörünüde kullanarak bu işlemi aşağıdaki  gibi yazabiliriz. <br />
+                  [sonuç]  = [değişken1] - [değişken2] </p>
+                <p><strong>Çarpma Operatörü *: </strong>&nbsp;&nbsp;&nbsp;Bu  operatör ile verilen operandlar birbiriyle çarpılabilir. Genel yazılışı  aşağıdaki gibidir. <br />
+                  değişken1]  * [değişken2] <br />
+  &nbsp;&nbsp;&nbsp;Eğer  bu iki değişkenin çarpılması sonucunda oluşan değeri sonuç isimli bir değişkene  atamak istersek eşitleme operatörünüde kullanarak bu işlemi aşağıdaki gibi  yazabiliriz. <br />
+                  [sonuç]  = [değişken1] * [değişken2] </p>
+            <p><strong>Bölme Operatörü / :</strong>&nbsp;&nbsp;&nbsp;Bu  operatör ile verilen operandlar birbirine bölünebilir. Genel yazılışı aşağıdaki  gibidir. <br />
+                  [değişken1]  / [değişken2] <br />
+  &nbsp;&nbsp;&nbsp;Eğer  bu iki değişkenin çarpılması sonucunda oluşan değeri sonuç isimli bir değişkene  atamak istersek eşitleme operatörünüde kullanarak bu işlemi aşağıdaki gibi yazabiliriz <br />
+                  [sonuç]  = [değişken1] / [değişken2] <br />
+  &nbsp;&nbsp;&nbsp;Bölme  işleminin sonucundaki hassasiyet değişkenlerden en hassası ile orantılıdır.  Yani 2 int değişkeninin sonucu int'tir. int / double 'ın sonucu double'dır  vs... </p>
+                <p><strong>Modül Alma Operatörü % </strong></p>
+                <p>&nbsp;&nbsp;&nbsp;Bu  operatör ile birinci operandın modül ikinic operandı alınır. Genel yazılışı  aşağıdaki gibidir. <br />
+                  [değişken1]  % [değişken2] <br />
+  &nbsp;&nbsp;&nbsp;Sonuçun  ta oluşan değeri sonuç isimli bir değişkene atamak istersek eşitleme  operatörünüde kullanarak bu işlemi aşağıdaki gibi yazabiliriz <br />
+            [sonuç]  = [değişken1] % [değişken2] </p>
+                <p>0' a  göre modül alma yada 0'a bölme programın çalışması sırasında hataya yol açar. </p>
+                <p><strong>++ Operatörü </strong><br />
+  &nbsp;&nbsp;&nbsp;operandın  değerini bir arttırmak amacıyla kullanılır. İki şekilde kullanılabilir. <br />
+  &nbsp;&nbsp;&nbsp;Birincisinde  operandın önüne yazılır. <br />
+                  ++[değişken1] <br />
+  &nbsp;&nbsp;&nbsp;Bu  durumda değişkenin değeri önce arttırılır. Daha sonra işlenir. </p>
+                <p>&nbsp;&nbsp;&nbsp;İkinci  türde ise operanddan sonra yazılır <br />
+                  değişken1]++ <br />
+  &nbsp;&nbsp;&nbsp;Bu  durumda değişken önce işlenir. Sonra değeri arttırılır. </p>
+                <p><strong>-- Operatörü </strong><br />
+  &nbsp;&nbsp;&nbsp;operandın  değerini bir azaltmak amacıyla kullanılır. İki şekilde kullanılabilir. <br />
+  &nbsp;&nbsp;&nbsp;Birincisinde  operandın önüne yazılır. <br />
+                  -[değişken1] <br />
+  &nbsp;&nbsp;&nbsp;Bu  durumda değişkenin değeri önce azaltılır. Daha sonra işlenir. </p>
+                <p>&nbsp;&nbsp;&nbsp;İkinci  türde ise operanddan sonra yazılır <br />
+                  değişken1]-- <br />
+  &nbsp;&nbsp;&nbsp;Bu  durumda değişken önce işlenir. Sonra değeri azaltılır. </p>
+                <p><strong>Örnek 2 : </strong><br />
+                  01  #include &quot;iostream.h&quot;</p>
+                <p>02 </p>
+                <p>03  void main()</p>
+                <p>04 {</p>
+                <p>05    int s1 = 20;</p>
+                <p>06    int s2 = 15;</p>
+                <p>07    cout &lt;&lt; &quot;s1 = &quot; &lt;&lt; s1  &lt;&lt; endl; </p>
+                <p>08    cout &lt;&lt; &quot;s2 = &quot; &lt;&lt; s2  &lt;&lt; endl;</p>
+                <p>09 </p>
+                <p>10    cout &lt;&lt; &quot;++s1 * s2-- = &quot;  &lt;&lt; ++s1 * s2-- &lt;&lt; endl;</p>
+                <p>11 </p>
+                <p>12    cout &lt;&lt; &quot;s1 = &quot; &lt;&lt; s1  &lt;&lt; endl; </p>
+                <p>13    cout &lt;&lt; &quot;s2 = &quot; &lt;&lt; s2  &lt;&lt; endl &lt;&lt; endl;</p>
+                <p>14 </p>
+                <p>15    cout &lt;&lt; &quot;s1-- &quot; &lt;&lt;  s1-- &lt;&lt; endl;</p>
+                <p>16    cout &lt;&lt; &quot;s1 = &quot; &lt;&lt; s1  &lt;&lt; endl;    </p>
+                <p>17    cout &lt;&lt; &quot;++s1 &quot; &lt;&lt;  ++s1 &lt;&lt; endl;   </p>
+                <p>18    cout &lt;&lt; &quot;s1 = &quot; &lt;&lt; s1  &lt;&lt; endl &lt;&lt; endl;    </p>
+                <p>19    </p>
+                <p>20    cout &lt;&lt; &quot;5%3 = &quot; &lt;&lt; 5  % 3 &lt;&lt; endl &lt;&lt; endl;</p>
+                <p>21 </p>
+                <p>22    cout &lt;&lt; &quot;8 - 3 * 4 + 5 / 7 =  &quot; &lt;&lt; 8 - 3 * 4 + 5 / 7 &lt;&lt; endl;</p>
+                <p>23    cout &lt;&lt; &quot;8.0 - 3.0 * 4.0 + 5 /  7.0 = &quot; &lt;&lt; 8.0 - 3.0 * 4.0 + 5 / 7.0 &lt;&lt; endl;</p>
+                <p>24 }</p>
+                <p><strong>Örnek 2 Ekran Çıktısı : </strong><br />
+                  s1 =  20 <br />
+                  s2 =  15 <br />
+                  ++s1  * s2-- = 315 <br />
+                  s1 =  21 <br />
+                  s2 =  14 </p>
+                <p>s1--  21 <br />
+                  s1 =  20 <br />
+                  ++s1  21 <br />
+                  s1 =  21 </p>
+                <p>5%3  = 2 </p>
+                <p>8 -  3 * 4 + 5 / 7 = -4 <br />
+                  8.0  - 3.0 * 4.0 + 5 / 7.0 = -3.28571 </p>
+                <p><strong> Açıklama: ( Örnek 2 için)</strong><br />
+  &nbsp;&nbsp;&nbsp;Dikkat  edilecek olunursa 10. satırda 21 ile 15 çarpılmştır. Yani ++ s1'in önünde  olduğundan dolayı s1 çarpma işleminden önce arttırılmıştır. -- s23'den sonra  olduğundan dolayı s2 çarpma işleminden sonra azaltılmıştır.Bir başka deyişle s2  önce işlenmiş sonra azaltılmıştır. <br />
+  &nbsp;&nbsp;&nbsp;Bir  diğer dikkat edilecek nokta ise 22 ve 23. satırlardadır. 22 satırdaki işlemde  hassasiyet int seviyesinde olduğundan 5 / 7 0 olarak işlenmiştir. 23. satırda  ise seviye noktalı sayılar seviyesinde olduğundan 0'dan farklı bir değer  almıştır</p>
+                <p><strong>Karşılaştırma Operatörleri Nelerdir? </strong><br />
+  &nbsp;&nbsp;&nbsp;Karşılaştırma  operatörleri karşılaştırma işlemlerinde kullanılan operatörlerdir. İki operandı  birbirleriyle karşılaştırılırlar. Eğer karşılaştırma doğru ise 1 yanlış ise 0  döndürürler. <br />
+  &nbsp;&nbsp;&nbsp;Şimdi  bu operatörlere sıra ile göz atalım. </p>
+                <p><strong>&gt; Operatörü </strong></p>
+                <p>&nbsp;&nbsp;&nbsp;Kullanımı: <br />
+                  [operand1]  &gt; [operand2] <br />
+  &nbsp;&nbsp;&nbsp;Eğer  operand1 operand2'den küçük ise 1 döndürür. Aksi taktirde 0 döndürür. </p>
+                <p><strong>&lt; Operatörü </strong></p>
+                <p>&nbsp;&nbsp;&nbsp;Kullanmı: <br />
+                  [operand1]  &lt; [operand2] <br />
+  &nbsp;&nbsp;&nbsp;Eğer  operand1 operand2'den büyük ise 1 döndürür. Aksi taktirde 0 döndürür. </p>
+                <p><strong>&nbsp;</strong></p>
+                <p><strong>&gt;= Operatörü </strong></p>
+                <p>&nbsp;&nbsp;&nbsp;Kullanımı <br />
+                  [operand1]  &gt;= [operand2] <br />
+  &nbsp;&nbsp;&nbsp;Eğer  operand1 operand2'den küçük yada eşit ise 1 döndürür. Aksi taktirde 0 döndürür. </p>
+                <p><strong>&lt;= Operatörü </strong><br />
+  &nbsp;&nbsp;&nbsp;Kullanımı <br />
+                  [operand1]  &lt;= [operand2] <br />
+  &nbsp;&nbsp;&nbsp;Eğer  operand1 operand2'den büyük yada eşit ise 1 döndürür. Aksi taktirde 0 döndürür. </p>
+                <p><strong>== Operatörü </strong></p>
+                <p>&nbsp;&nbsp;&nbsp;Kullanımı <br />
+                  [operand1]  == [operand2] <br />
+  &nbsp;&nbsp;&nbsp;Eğer  operand1 operand2'den eşit ise 1 döndürür. Aksi taktirde 0 döndürür. </p>
+                <p><strong>!= Operatörü </strong></p>
+                <p>&nbsp;&nbsp;&nbsp;Kullanımı <br />
+                  [operand1]  != [operand2] <br />
+  &nbsp;&nbsp;&nbsp;Eğer  operand1 operand2'den eşit değil ise 1 döndürür. Aksi taktirde 0 döndürür.<br />
+  <strong>Bit Bazında İşlem Yapan Operatörler </strong><br />
+                  Bu  operatörler bit bazında işlemler gerçekleştirir. Bir bit'in değeri ya 0 yada  1'dir. <br />
+                  Şimdi  bu operatörlere sıra ile göz atalım. </p>
+                <p><strong>&amp; Operatörü </strong><br />
+                  Mantık  kapılarındaki ve (and) kapısı ile aynı işlemi gerçekleştirir. </p>
+                <p>Operand1  Operand2 Sonuç <br />
+                  1                 1                1 <br />
+                  1                      0                  0 <br />
+                  0                      1                       0 <br />
+                  0                      0                       0 </p>
+            <p><strong>Kullanımı : </strong><br />
+                  [operand1]  &amp; [operand2] <br />
+                  Eğer  iki operand'da 1 ise sonuç 1'dir. Diğer durumlar için sonuç 0'dır </p>
+                <p><strong>I Operatörü</strong></p>
+                <p>Mantık  kapılarındaki veya (or) kapısı ile aynı işlemi gerçekleştirir. <br />
+                  Operand1  Operand2 Sonuç <br />
+                  1                      1          1 <br />
+                  1                      0          1 <br />
+                  0                      1          1 <br />
+            0                      0          0 </p>
+                <p>&nbsp;</p>
+                <p><strong>Kullanımı : </strong><br />
+                  [operand1]  | [operand2] <br />
+                  Eğer  iki operand'dan biri 1 ise sonuç 1'dir. Her ikiside 0 ise sonuç 0'dır </p>
+                <p><strong>^ Operatörü</strong><br />
+                  Mantık  kapılarındaki XOR kapısı ile aynı işlemi gerçekleştirir. </p>
+                <p>Operand1  Operand2 Sonuç <br />
+                  1                      1           0 <br />
+                  1                      0           1 <br />
+                  0                      1            1 <br />
+                  0                     0          1 </p>
+                <p><strong>Kullanımı : </strong><br />
+                  [operand1]  ^ [operand2] <br />
+                  Eğer  iki operand farklı ise sonuç 1 dir. İki operatör aynı ise sonuç 0'dır. </p>
+                <p><strong>&nbsp;</strong></p>
+                <p><strong>~Operatörü</strong><br />
+                  Operand1  Sonuç <br />
+                  1                      0 <br />
+                  0                      1 </p>
+                <p><strong>Kullanımı : </strong><br />
+                  ~[operand1] <br />
+                  1  değeri 0 ; 0 değeri 1 olur. </p>
+                <p><strong>&lt;&lt; Operatörü </strong><br />
+                  Sola  kaydırma (left shift) operatörü: Kaydırma operatörünün her iki operandıda int  türündene olmalıdır. </p>
+                <p><strong>Kullanımı : </strong><br />
+                  [operand1]  &lt; &lt; [operand2] <br />
+                  Yukardaki  işlem operand1 * 2*operand2'ye eşittir. <br />
+                  101001  şeklinde bir bit dizisi sola kaydırıldığında sonuç 010010 olur. </p>
+                <p><strong>&gt;&gt; Operatörü</strong><br />
+                  Sağa  kaydırma (right shift) operatörü. </p>
+                <p><strong>Kullanımı : </strong><br />
+                  [operand1]  &gt;&gt; [operand2] <br />
+                  Yukardaki  işlem operand1 / 2*operand2'ye eşittir. <br />
+                  101001  şeklinde bir bit dizisi sağa kaydırıldığında sonuç 010100 olur.</p>
+                <p><strong>Eşitleme Operatörleri </strong><br />
+  &nbsp;&nbsp;&nbsp;Bir  operandı diğerine eşitleyen yada operandın üzerinde işlem gerçekleştirdikten  sonra eşitleyen operatörlerdir. <br />
+  &nbsp;&nbsp;&nbsp;Şimdi  bu operatörlere sıra ile göz atalım. </p>
+                <p><strong>= Operatörü </strong><br />
+  &nbsp;&nbsp;&nbsp;İki  operandı birbirine eşitler. <br />
+  &nbsp;&nbsp;&nbsp;Kullanımı  : <br />
+                  [operand1]  = [operand2] <br />
+  &nbsp;&nbsp;&nbsp;operand1'e  operand2'nin değeri atanır. </p>
+                <p><strong>+= Operatörü </strong><br />
+  &nbsp;&nbsp;&nbsp;Kullanımı  : <br />
+                  [operand1]  += [operand2] <br />
+  &nbsp;&nbsp;&nbsp;operand1'e  operand1+operand2'nin değeri atanır. </p>
+                <p>-=  Operatörü <br />
+  &nbsp;&nbsp;&nbsp;Kullanımı  : <br />
+                  [operand1]  -= [operand2] <br />
+  &nbsp;&nbsp;&nbsp;operand1'e  operand1-operand2'nin değeri atanır. </p>
+                <p>*=  Operatörü <br />
+  &nbsp;&nbsp;&nbsp;Kullanımı  : <br />
+                  [operand1]  *= [operand2] <br />
+  &nbsp;&nbsp;&nbsp;operand1'e  operand1*operand2'nin değeri atanır. </p>
+                <p>/=  Operatörü <br />
+  &nbsp;&nbsp;&nbsp;Kullanımı  : <br />
+                  [operand1]  /= [operand2] <br />
+  &nbsp;&nbsp;&nbsp;operand1'e  operand1/operand2'nin değeri atanır. </p>
+                <p>%=  Operatörü <br />
+  &nbsp;&nbsp;&nbsp;Kullanımı  : <br />
+                  [operand1]  %= [operand2] <br />
+  &nbsp;&nbsp;&nbsp;operand1'e  operand1%operand2'nin değeri atanır. </p>
+                <p>&gt;&gt;=  Operatörü <br />
+  &nbsp;&nbsp;&nbsp;Kullanımı  : <br />
+                  [operand1]  &gt;&gt;= [operand2] <br />
+  &nbsp;&nbsp;&nbsp;operand1'e  operand1&gt;&gt;operand2'nin değeri atanır. </p>
+                <p>&lt;&lt;=  Operatörü <br />
+  &nbsp;&nbsp;&nbsp;Kullanımı  : <br />
+                  [operand1]  &lt;&lt;= [operand2] <br />
+  &nbsp;&nbsp;&nbsp;operand1'e  operand1&lt;&lt;operand2'nin değeri atanır. </p>
+                <p>&amp;=  Operatörü <br />
+  &nbsp;&nbsp;&nbsp;Kullanımı  : <br />
+                  [operand1]  &amp;= [operand2] <br />
+  &nbsp;&nbsp;&nbsp;operand1'e  operand1!operand2'nin değeri atanır. </p>
+                <p>!=  Operatörü <br />
+  &nbsp;&nbsp;&nbsp;Kullanımı  : <br />
+                  [operand1]  != [operand2] <br />
+  &nbsp;&nbsp;&nbsp;operand1'e  operand1!operand2'nin değeri atanır. </p>
+                <p>^=  Operatörü <br />
+  &nbsp;&nbsp;&nbsp;Kullanımı  : <br />
+                  [operand1]  ^= [operand2] <br />
+  &nbsp;&nbsp;&nbsp;operand1'e  operand1^operand2'nin değeri atanır.<br />
+                  Mantıksal  Operatörler &lt;Resim&gt;&lt;Resim&gt;<br />
+                  Nelerdir? <br />
+  &nbsp;&nbsp;&nbsp;Bu  operatörler mantıksal durumlarda durumları birleştirmeye yarar. <br />
+                  Şimdi  bu operatörlere sıra ile göz atalım. </p>
+                <p>&lt;Resim&gt;!  Operatörü &lt;Resim&gt;&lt;Resim&gt;<br />
+  &nbsp;&nbsp;&nbsp;Kullanımı  : </p>
+                <p>![operand1] </p>
+                <p>&nbsp;&nbsp;&nbsp;Eğer  operand1'in tersi durum anlamına gelir. </p>
+                <p>&nbsp;</p>
+                <p><strong>Örnek </strong></p>
+                <p>if(  !operand1)<br />
+                  {<br />
+                  // Bu blok operand1'in tersi durumlarda icra  edilecektir.</p>
+                <p>}<br />
+  &nbsp;&nbsp;&nbsp;Eğer  operand1'in tersi durum anlamına gelir. </p>
+                <p>&lt;Resim&gt;&amp;&amp;  Operatörü &lt;Resim&gt;&lt;Resim&gt;</p>
+                <p>&nbsp;&nbsp;&nbsp;<strong>Kullanımı : </strong></p>
+                <p>operand1]  &amp;&amp; [operand2] </p>
+                <p>&nbsp;&nbsp;&nbsp;Eğer  operand1 ve operand2 doğru ise </p>
+                <p><strong>Örnek </strong></p>
+                <p>if(  operand1 &amp;&amp; operand2)</p>
+                <p>{</p>
+                <p>  /* Bu blok operand1 ve operand2'nin doğru</p>
+                <p>     olduğu durumlarda icra edilecektir.</p>
+                <p>  */</p>
+                <p>}</p>
+                <p>&nbsp;&nbsp;&nbsp;Eğer  operand1'in tersi durum anlamına gelir. </p>
+                <p>&lt;Resim&gt;||  Operatörü &lt;Resim&gt;&lt;Resim&gt;</p>
+                <p>&nbsp;&nbsp;&nbsp;<strong>Kullanımı : </strong></p>
+                <p>operand1]  || [operand2] </p>
+                <p>&nbsp;&nbsp;&nbsp;Eğer  operand1 veya operand2 doğru ise </p>
+                <p><strong>Örnek </strong></p>
+                <p>if(  operand1 || operand2)</p>
+                <p>{</p>
+                <p>  /* Bu blok operand1 ve operand2'den biri  doğru</p>
+                <p>     olduğu durumlarda icra edilecektir.</p>
+                <p>  */</p>
+                <p>}<br />
+                  <strong>NEW Operatörü<br />
+                  </strong><br />
+                  Genel biçimi:<br />
+  <br />
+                  new &lt;tür&gt; [&lt;[uzunluk]&gt;]<br />
+  <br />
+                  new int<br />
+                  new char<br />
+                  new double [10]<br />
+                  new float[n]<br />
+                  new char[strlen(s) + 1]<br />
+  <br />
+  &nbsp;&nbsp;&nbsp; Eğer köşeli parantez olmadan sadece tür ismi isle tahsisat  yapılırsa o türden bir elemanlık yer tahsis edilmiş olur. Örneğin:<br />
+                  new int à1 int'lik yer tahsis edilmiştir. <br />
+  &nbsp;&nbsp;&nbsp; Eğer köşeli parantez içerisine ifade yazılarak kullanılırsa  bu durumda o ifade ile belirtilen sayıda elemanlık alan tahsis edilir. new  operatörü türü belirli bir alan tahsis eder. Yani new operatörüyle elde edilen  adresin tür bileşeni çağırılma ifadesindeki tür ile aynı olur. <br />
+  <br />
+                  int *p;<br />
+                  p = new int;&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp; Burada sizeof(int) kadar  byte tahsis ediliyor ve tahsis edilen&nbsp;&nbsp;&nbsp;  */&nbsp;&nbsp;&nbsp;&nbsp; /* &nbsp;&nbsp;&nbsp;&nbsp; alanın başlangıç adresi  elde ediliyor. Bu adres int türündedndir.&nbsp;&nbsp;&nbsp;&nbsp; */<br />
+  <br />
+                  char *p;<br />
+                  p = new int [10];&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp; C++'ta hatadır.  &nbsp;&nbsp;&nbsp;&nbsp; */<br />
+                  p = (char *)new int[10];&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp; Hata değil.  &nbsp;&nbsp;&nbsp;&nbsp; */<br />
+  <br />
+                  /*----------new1.cpp---------*/<br />
+                  #include &lt;stdio.h&gt;<br />
+                  #include &lt;string.h&gt;<br />
+  <br />
+                  void main(void)<br />
+                  {<br />
+                  char *p;<br />
+  <br />
+                  p = new char[30];<br />
+                  gets(p);<br />
+                  puts(p);<br />
+                  }<br />
+                  /*------------------------------*/<br />
+  <br />
+                  new bir operatördür. Ancak derleyici bu operatör kullanıldığında dinamik  tahsisat işleminin yapılmasını sağlamak için dinamik tahsisat yapan bir  fonksiyonun çağırma kodunu amaç koda ekler. Yani new bir operatör olmasına  karşın tahsisat işlemi yerleştirilen bu fonksiyon sayesinde programın çalışma zamanı  sırasında yapılmaktadır. Bu operatör öncelik tablosunun ikinci düzeyinde  bulunmaktadır. Örneğin:<br />
+                  new int + n<br />
+                  gibi bir işlem geçerlidir. İşlemler:<br />
+                  İşlem 1 : new int<br />
+                  İşlem 2 : İşlem 1 + n<br />
+  <br />
+                  new operatörü tahsisat işlemini yapamazsa 0 değerini(NULL gösterici) üretir. <br />
+  <br />
+                  /*-------freestor.cpp------*/<br />
+                  /*free store alanının hesaplanması*/<br />
+                  #include &lt;stdio.h&gt;<br />
+  <br />
+                  #define BLOCKSIZE 1024<br />
+  <br />
+                  void main(void)<br />
+                  {<br />
+                  long size = 0;<br />
+                  char *p;<br />
+  <br />
+                  for(;;){<br />
+                  p = new char[BLOCKSIZE];<br />
+                  if(p == NULL)<br />
+                  break;<br />
+                  size += BLOCKSIZE;<br />
+                  }<br />
+                  printf(&quot;Free store size = %ld\n&quot;, size);<br />
+                  }<br />
+                  /*---------------------------*/<br />
+  <br />
+  &nbsp;&nbsp;&nbsp; Köşeli parantez içerisine yazılan ifade sabit ifadesi olmak  zorunda değildir. <br />
+  <br />
+                  /*-----------new2.cpp---------*/<br />
+                  /*Tam olarak ad sosay uzunluğu kadar bellek tahsis eden fonksiyonun kullanılışı*/<br />
+                  #include &lt;stdio.h&gt;<br />
+                  #include &lt;stdlib.h&gt;<br />
+  <br />
+                  char *getname(void)<br />
+                  {<br />
+                  char *p;<br />
+                  char buf[80];<br />
+  <br />
+                  printf(&quot;Adı Soyadı:);<br />
+                  gets(buf);<br />
+                  p = new char[strlen(buf) + 1)];<br />
+                  if(p == NULL){<br />
+                  printf(&quot;Cannot allocate memory..\n&quot;);<br />
+                  exit(1);<br />
+                  }<br />
+                  strcpy(p, bu<br />
+                  const int MAX = a + 100 return p;<br />
+                  }<br />
+  <br />
+                  void main(void)<br />
+                  {<br />
+                  char *p;<br />
+  <br />
+                  p = getname();<br />
+                  puts(p);<br />
+                  }<br />
+                  /*--------------------------------*/ </p>
+<p><strong> DELETE Operatörü</strong><br />
+                  <br />
+                  <strong>&nbsp;</strong>&nbsp;&nbsp; delete operatöürü new operatörüyle tahsis edilmiş  olan blokları serbest bırakmak için kullanılır. Genel biçimi:<br />
+                  1.&nbsp;&nbsp;&nbsp; delete p;<br />
+                  2.&nbsp;&nbsp;&nbsp; delete [] p;<br />
+                  <br />
+      <strong>&nbsp;&nbsp;&nbsp;</strong> Eğer tahsisat tek parça olarak yapılmışsa yani  köşeli parantez kullanılmadan yapılmışsa silme işlemi köşeli parantez  kullanılmadan yapılmalıdır. Örneğin:<br />
+      <br />
+      int *p;<br />
+      p = new int;<br />
+      delete p;<br />
+      <br />
+      &nbsp;&nbsp;&nbsp; Eğer tahsisat işlemi birden fazla eleman için  yapılmışsa yani köşeli parantez kullanılarak yapılmışsa serbest bırakma  işleminde de köşeli parantez kullanılmalıdır. Örneğin:<br />
+      <br />
+      int *p;<br />
+      p = new int[n];<br />
+      delete [] p;<br />
+      <br />
+      Burada köşeli parantez içerisine bir şey yazılmaz. delete operatörü  unary prefix bir operatördür ve öncelik tablosunun ikinci düzeyinde bulunur.<br />
+      <br />
+      delete p + 1; /*Hatalı*/<br />
+      delete (p + 1);/*Doğru*/<br />
+      <br />
+      delete operatörünün operandı daha önce tahsis edilmiş olan bloğun  başlangıç adresi olmalıdır. Değilse beklenmeyen sonuçlar ortaya çıkabilir.  Tabii derleici delete operatörüne karşılık amaç koda (object module'e) free  gibi tahsis edilmiş bloğu serbest bırakan bir fonksiyon kodu yerleştirmektedir.  new delete operatörlerinin tahsisat işlemlerinde kullandığı fonksiyon maloc,  calloc, free fonksiyonları olmak zorunda değildir. Bu iki grup fonksiyon farklı  tahsisat tabloları kullanıyor olabilir. Bu nedenle new delete operatörleriyle  malloc, calloc, free gibi standart C fonksiyonlarını özel bir durum yoksa  birlikte kullanmamak gerekir. Çünkü bir grup tarafından tahsis edilen alan  diğer grup tarafından tahsis edilmemiş gibi gözükebilir. <br />
+      &nbsp;&nbsp;&nbsp; Görüldüğü gibi C++'ta realloc fonksiyonun karşılığı  bir operatör yoktur. Ancak böyle bir fonksiyon yazılabilir. <br />
+      <br />
+      /*------------realloc.cpp---------------*/<br />
+      void *Realloc(void *ptr, size_t newsize, size_t oldsize) /*size_t  àunsigned int*/<br />
+      {<br />
+      &nbsp;&nbsp;&nbsp; void temp;<br />
+      <br />
+      &nbsp;&nbsp;&nbsp; temp = new char [newsize];<br />
+      &nbsp;&nbsp;&nbsp; memcpy(temp, ptr, oldsize);<br />
+      &nbsp;&nbsp;&nbsp; delete [] ptr;<br />
+      &nbsp;&nbsp;&nbsp; return temp;<br />
+      }<br />
+      /*----------------------------------------*/<br />
+      <br />
+      <br />
+      Kullanımı:<br />
+      p = new char [10];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  /*&nbsp;&nbsp;&nbsp; 10 * sizeof(char) kadar bellek tahsis  edildi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br />
+      p = Realloc(p, 20, 10);&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp; Tahsis  edilmiş alan 20 * sizeof(char)'e büyütüldü&nbsp;&nbsp;&nbsp; */</p>
+            <p><strong>SET_NEW_Handler FONKSİYONU</strong></p>
+                <p>Normal  olarak new oparetörü başarısızlıkla sonuçlandığında 0 adresine geri döner ve bu  adresin test edilmesi gerekir. Ancak her new kullanımında bu adresin test  edilmesi yerine daha etkin bir yöntem kullanılmaktadır. new operatörü başarısız  olduğunda set_new_handler fonksiyonu ile belirlenen fonksiyonu çağırmaktadır.  Böylece her defasında kontrol yapılmasına gerek kalmaz. <br />
+                  <br />
+                  set_new_handler(void (*ptr)(void));<br />
+  <br />
+                  set_new_handler'a parametre olarak geri dönüş değeri void parametresi void olan  bir fonksiyonun adresi verilir. Artık başarısızlık durumunda bu fonksiyon  çağırılacaktır. new operatörü başarısızlık durumunda belirlenen fonksiyonu  çağırır ve bu fonksiyon çağırıldıktan sonra tekrar tahsisat işlemini yapar.  Yine başarısız olursa tekrar fonksiyonu çağırır ve bu böyle devam eder. Yani  aşağıdaki algoritmadaki gib çalışır:<br />
+                  for(;;){<br />
+  &nbsp;&nbsp;&nbsp; if(boşyer var mı)<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return boşyer;<br />
+                  else<br />
+  &nbsp;&nbsp;&nbsp; set_new_handler();<br />
+                  }<br />
+  <br />
+                  /*-----------snhandle.cpp---------------*/<br />
+                  #include &lt;stdio.h&gt;<br />
+                  #include &lt;new.h&gt;<br />
+                  #include &lt;stdlib.h&gt;<br />
+  <br />
+                  long size = 0;<br />
+  <br />
+                  void myhandler(void)<br />
+                  {<br />
+                  printf(&quot;Free store size=%ld\n&quot;, size);<br />
+                  exit(1);<br />
+                  }<br />
+                  void main(void)<br />
+                  {<br />
+                  void *ptr;<br />
+                  void *oldhandler;<br />
+  <br />
+                  oldhandler = set_new_handler(myhandler);<br />
+                  for(;;){<br />
+                  ptr = new char [1024];<br />
+                  size += 1024;<br />
+                  }<br />
+                  }<br />
+                  sen_new_handler(oldhandle);&nbsp;&nbsp;&nbsp; /*handler eski haline  dönüştürüldü*/<br />
+                  /*------------------------------------------*/<br />
+  <br />
+                  set_new_handler'ın prototipi new.h içindedir.<br />
+  <br />
+                  7-)Bir adresin farklı türden bir göstericiye atanması ve adres olmayan bir  bilginin bir göstericiye atanması durumu uyarı değil error olarak  değerlendirilir.<br />
+  &nbsp;&nbsp;&nbsp; Adres işlemlerinde tür uyuşmazlıkları C++'ta eror olarak  değerlendirilir. Oysa standart C derleyicileri böyle durumlarda en fazla uyarı  verirler. Ancak void göstericiye herhangi bir türden adres atanabilir. Fakat  void bi adresin herhangi bir göstericiye atanması error olarak  değerlendirlir(bu durum C'de en fazla uyarı olaak değerlendilir). Tabii tür  dönüştürme operatörüyle her tür her türe atanabilir. <br />
+  <br />
+                  /*----------fark7.cpp----------*/<br />
+                  void main(void)<br />
+                  {<br />
+                  int s[100];<br />
+                  char *t;<br />
+  <br />
+                  t = s;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp;&nbsp;  &quot;Cannot convert 'int *' to 'char *'&quot; hatasını verir&nbsp;&nbsp;&nbsp;  */<br />
+                  t = (char *)s;&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp; Hata vermez  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  */<br />
+                  }<br />
+                  /*--------------------------------*/<br />
+  <br />
+  &nbsp;&nbsp;&nbsp; Benzer biçimde const bir değişkenin adresi ancak const bir  göstericiye atanmalıdır. <br />
+  <br />
+                  const int x;<br />
+                  int *y;<br />
+                  conts int *p;<br />
+                  y= &amp;x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp; Hata  verir &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br />
+                  p = &amp;x;&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp; Hata vermez  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br />
+  <br />
+                  8-)const bildirimi ile yaratılmış bir değişken sabit ifadesi gibi işlem görür.<br />
+  &nbsp;&nbsp;&nbsp; C++'ta const bir değişken için yine bellekte yer ayrılır.  Ancak const değişken kullanıldığında derleyici eğer const değişkene ilk değer  sabit ifadesiyle verildiyse derleyici doğrudan o sabit ifadesini kullanır.  Tabii const değişkene verilen ilk değer sabit ifadesi değilse bu consta değişken  kullanıldığında derleyici doğrudan bir sayı yerleştiremez, const değişkenin  kendisini yerleştirir. <br />
+  <br />
+                  ;<br />
+                  const int MIN = 1;<br />
+                  y = MAX;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp; Burada  bir sayı yazamaz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br />
+                  y = MIN;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp; Burada  MIN yerine 1 yazılabilir&nbsp;&nbsp;&nbsp; */<br />
+                  const int SIZE = 10;<br />
+                  int a[SIZE];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp;  C++'ta geçerli C'de geçerli değil&nbsp;&nbsp;&nbsp; */<br />
+  <br />
+                  const değişken için yine de bellkte yer ayrılır. Bu durumda const değişkenin  adresi alınabilir. Bu yolla const deişkenin içeriği de değiştirilebilir. Tabii  bu değiştirme programın çalışma zamanı içerisinde olduğundan sonucu  değiştirmez. <br />
+  <br />
+                  /*----------fark8.cpp------------*/<br />
+                  #include &lt;stdio.h&gt;<br />
+  <br />
+                  void main(void)<br />
+                  {<br />
+                  const int SIZE = 10;<br />
+                  int *p;<br />
+  <br />
+                  p = (int *)&amp;SIZE;<br />
+                  *p = 20;<br />
+                  printf(&quot;%d\n&quot;, SIZE);<br />
+                  }<br />
+                  /*--------------------------------*/<br />
+  <br />
+                  9-)C++'ta statik ömürlü değişkenlere sabit ifadesiyle ilk değer verme  zorunluluğu yoktur. <br />
+  &nbsp;&nbsp;&nbsp; Global değişkenler ve statik yerel değişkenler gibi statik  ömürlü değişkenlere ilk değer C'de sabit ifadesiyle verilmek zorundadır. Çünkü  statik ömürlü değişkenler amaç kod içerisine ilk değerleriyle yazılırlar. Exe  dosyasının içerisinde yer alırlar. Bunun mümkün olabilmesi için verilen ilk  değerlerin derleme aşamasında belirlenmiş olması gerekir. Derleme aşamasında  tespit edilmesi için ifadenin sabit ifadesi olması gerekir. Oysa C++'ta statik  ömürlü değişkenlere her türden sıradan bir ifadeyle ilk değer verilebilir. Bu  değişkenler 0 ilk değeriyle amaç koda yazılırlar. Programın çalışma zamanı  sırasında ve main fonksiyonundan önce ilk değerini alırlar. <br />
+  <br />
+                  10-)Parametre değişkenlerinin default değerler alması(default function  arguments)<br />
+  &nbsp;&nbsp;&nbsp; C++'ta fonksiyon çağırılırken bir parametre belirtilmemişse  ona ilişkin parametre değişkeni default bir değer alabilir. Böyle bir durum  C'de yoktur. Bir parametre değişkeninin default değer alması durumu fonksiyon  tanımlanırken ya da prototip bildiriminde paramere değişkeninden sonra eşittir  operatörüyle belirtilmelidir. <br />
+  <br />
+                  /*---------fark10.cpp----------*/<br />
+                  #include &lt;stdio.h&gt;<br />
+  <br />
+                  void fonk(int x = 10, int y = 20)<br />
+                  {<br />
+                  printf(&quot;x = %d y = %d\n&quot;, x ,y);<br />
+                  }<br />
+  <br />
+                  void main(void)<br />
+                  {<br />
+                  fonk(100, 200);&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp;&nbsp; x =  100&nbsp;&nbsp;&nbsp; y = 200&nbsp;&nbsp;&nbsp; */<br />
+                  fonk(100);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp; x =  100 &nbsp;&nbsp;&nbsp;&nbsp; y = 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  */<br />
+                  fonk();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp; x = 10  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y = 20  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br />
+                  }<br />
+                  /*--------------------------------*/<br />
+  <br />
+  <br />
+                  Bir  parametre değişkeni default değer almışsa onun sağında bulunanların hepsi  default değerler almak zorundadır. <br />
+  <br />
+                  void fonk(int x = 10, int y)&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp; Hata verir  &nbsp;&nbsp;&nbsp;&nbsp; */<br />
+                  {<br />
+                  }<br />
+  <br />
+                  void fonk(int x, int y = 20)&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp; Hata vermez  &nbsp;&nbsp;&nbsp;&nbsp; */<br />
+                  {<br />
+                  }<br />
+  <br />
+                  Default değer almamış olan bütün parametre değişkenleri için çağırılma  ifadesinde parametre yazılmak zorundadır. Default değer alan parametre  değişkenlerine sahip fonksiyonlarla aynı isimli başka fonksiyonların birlikte  bulunması durumunda iki anlamlılık hataları oluşabilir. İki anlamlılık hataları  fonksiyonların tanımlanması sonucunda değil çağırılması sonucunda ortaya  çıkmaktadır. <br />
+  <br />
+                  /*&nbsp;&nbsp;&nbsp; İki anlamlılık hatası örneği&nbsp;&nbsp;&nbsp; */<br />
+                  #include &lt;stdio.h&gt;<br />
+  <br />
+                  void fonk(int x, int y = 20)<br />
+                  {<br />
+                  printf(&quot;%d %d\n&quot;, x, y);<br />
+                  }<br />
+  <br />
+                  void fonk(int x)<br />
+                  {<br />
+                  printf(&quot;%d\n&quot;, x);<br />
+                  }<br />
+  <br />
+                  void main(void)<br />
+                  {<br />
+                  fonk(100, 200);&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp; Hata vermez  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */<br />
+                  fonk(100);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /*&nbsp;&nbsp;&nbsp; İki  anlamlılık hatası verir&nbsp;&nbsp;&nbsp; */<br />
+                  }<br />
+                  /*------------------------------------------*/<br />
+  <br />
+                  Bir gösterici parametresi de default değer alabilir. <br />
+  <br />
+                  /*&nbsp;&nbsp;&nbsp; Göstericiye default değer&nbsp;&nbsp;&nbsp; */<br />
+                  #include &lt;stdio.h&gt;<br />
+  <br />
+                  void message(const char *p = &quot;Success&quot;)<br />
+                  {<br />
+                  puts(p);<br />
+                  }<br />
+  <br />
+                  void main(void)<br />
+                  {<br />
+                  char *p = &quot;Ali&quot;;<br />
+  <br />
+                  message(p);<br />
+                  message();<br />
+                  }<br />
+                  /*-------------------------------------------*/<br />
+  <br />
+  <br />
+  <strong>Diğer Operatörler:</strong><br />
+                  </p>
+                <p>Şu  ana kadar gördüğümüz operatörler C dilinde de bulunan operatörlerdi. Şimdi ise  diğerlerinden farklı tarzdaki ve C++ ile gelen operatörlere göz atacağız.  Bunlardan C++'a ait olan operatörler C++ konularının içine girdikçe daha  detaylı olarakta anlatılacaktır. Bundan dolayı şu anda bu operatörlerin  isimlerini verip geçeceğiz </p>
+                <p>::  Operatörü <br />
+            &nbsp;&nbsp;&nbsp;Scope  Resolution operatörü. Fonksiyonlar konusuna göz atınız. </p>
+                <p>*  Operatörü <br />
+  &nbsp;&nbsp;&nbsp;Yönlendirme  operatörü. Göstergeç (pointer)'larla birlikte kulanılıyor. </p>
+                <p>&amp;  Operatörü <br />
+  &nbsp;&nbsp;&nbsp;  Adres operatörü. Göstergeç (pointer)'larla birlikte kulanılıyor. </p>
+                <p>&amp;  Operatörü <br />
+  &nbsp;&nbsp;&nbsp;  Referans operatörü. Fonksiyonlar konusuna göz atınız. &nbsp;&nbsp;&nbsp;</p>
+                <p>.  yada -&lt; Operatörleri <br />
+  &nbsp;&nbsp;&nbsp; </p></font>
+<h1>&nbsp;</h1>
+<p class="additional"></p></font>
+      </div>
+    </div>
+    <!-- end main -->
+    <!-- footer -->
+    <div id="footer">
+    <div id="left_footer"> <b>C++</b></div>
+    <div id="right_footer">
+
+<!-- Please do not change or delete this link. Read the license! Thanks. :-) -->
+Design by <a href="http://neozdemir.blogspot.com.tr/" title="Website Design"><strong>Neslihan Özdemir</strong></a>
+
+    </div>
+</div>
+    <!-- end footer -->
+</body>
+</html>

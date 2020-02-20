@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<!-- header -->
+    <div id="header">
+    <div id="menu">
+       <div id="menu_list"></div>
+    </div>
+</div>
+      <div id="logo">
+      <div id="logo_text">
+        <h1><a href="index.html"><img src="images/cplusplus.gif" width="163" height="74" alt="cplusplus" /></a></h1>
+      </div>
+    </div>
+    <!--end header -->
+    <!-- main -->
+    <div id="main">
+          <div id="sidebar">
+          	
+            <div class="item"></div>
+            <div class="item">
+              <blockquote>
+                <p><a href="index.html">ANASAYFA</a></p>
+              </blockquote>
+              <p>&nbsp;</p>
+              <ul>
+                <li><strong><a href="index.html">TARİHÇE</a></strong></li>
+                <li><strong><a href="cgiris.html">C ++ GİRİŞ</a></strong></li>
+                <li><strong><a href="cavant.html">C++ AVANTAJLARI</a></strong></li>
+               
+                <li><strong><a href="operatorler.html">OPERATÖRLER</a></strong></li>
+                <li><strong><a href="pointerlar.html">POİNTERLAR</a></strong></li>
+                <li><strong><a href="diziler.html">DİZİLER</a></strong></li>
+                <li><strong><a href="fonksiyonlar.html">FONKSİYONLAR</a></strong></li>
+                <li><strong><a href="donguler.html">DÖNG</a></strong><a href="donguler.html">ÜLER</a></li>
+              </ul>
+              <dl>
+              </dl>
+              <p><a href="index.html"><img src="images/computer.jpg" width="200" height="125" alt="kaynaklar" /></a></p>
+              <p>&nbsp;</p>
+            </div>
+           
+          </div>
+          <div id="text" >
+		  <br>
+               <font size="2"> <h1>Fonksİyonlar </h1>
+                <p>Fonksiyonlar  denilince hemen hemen hepimiz aklına y =f(x) şeklinde ifade edilen matematiksel  fonksiyon tanımı gelir. Aslında bu ifade bilgisayar progamlarında fonksiyon  olarak adlandırdığımız yapılar ile aynıdır. Matematiksel fonksiyonlar parametre  olarak aldıkları değer üzerinde bir işlem gerçekleştirip bir sonuç değeri  döndürürler. <br />
+                  Mesela  f(x) = 3*x şeklinde bir matematiksel fonksiyon x = 3 için f(x) = 9 değerini  verir. Burada x fonksiyonun parametresi, 9 ise fonsiyonun geri döndürdüğü değer  olmaktadır. <br />
+                  Benzer  işlemler bilgisayar programlarında kullanıdğımız fonksiyon yapıları için de söz  konusudur. <br />
+            Bilgisayar  programlarında kullanılan fonksiyon yapısının genel ifadesi </p>
+                <p>Döndürdüğü_değer_tipi  fonksiyonun_ismi (parametre_listesi) <br />
+                  { <br />
+                  tanımlamalar  ve komutlar <br />
+                  } <br />
+                  şeklindedir.  Bu genel ifadede bulunan bileşenleri incelersek </p>
+                <p>Döndürdüğü_değer_tipi  Genelde fonksiyonlar yapmaları gereken işi gerçekleştirdikten sonra kendilerini  çağıran program koduna bir değer döndürürler. Fonksiyon her hangi bir tipte  değer döndürebilir. Bu bileşen fonksiyonun döndüreceği değerin tipini ifade  eder. <br />
+                  Fonksiyonun_ismi  Tanımladığımız fonksiyona verdiğimiz isimdir. Program içerisinde fonksiyonumuza  bu isimle ulaşacağız. Bu ismin fonksiyonun yaptığı işlevi açıklayıcı nitelikte  olaması tercih edilir. <br />
+                  Parametre_listesi  Foksiyonun işlevini gerçekleştirirken kullanacağı değerlerin fonksiyonu çağıran  program kodu aracılığıyla geçilebilmesi için tanımlanan bir arayüzdür. Bu  arayüzde fonksiyona geçilecek parametreler tipleri ile sıralanır. </p>
+            <p>***Aksi  belirtilmediği sürece tüm foknsiyonlar int tipinde değer döndürürler. <br />
+                  Şunuda  hemen belirtelim ki fonksiyonlar illa bir değer döndürmek&nbsp; veya parametre  almalı zorunda değildirler. <br />
+                  Fonksiyon  kullanımına niçin gereklilik vardır? Foksiyon yazmadan da program yazılamaz mı? <br />
+                  Eğer  program kelimesinden anladığınız bizim verdiğimiz örnekler kısa kodlar ise evet  yazılır. Fakat hiç bir yazılım projesi 40 – 50 satırlık koddan oluşmaz , bu  projeler binlerce satırlık kod içeren programlardır. Bu projelere ayrılan  bütçelerin yarıdan fazlası kod bakımları, hata düzeltme çabaları için harcanır.  Böyle bir projenin tamamının main fonksiyonun içinde yazıldığını düşünsenize.  Böyle bir projede hata aramak istemezdim. <br />
+                  Günlük  yaşamımızda bir problemi çözerken problemi daha basit alt problemciklere  böleriz ve bunların her birini teker teker ele alırız. Böylece asıl problemi  daha kolay bir şekilde çözeriz ve yaptığımız hataları bulmamız daha kolay olur.  Yazılım projelerinde de aynı yaklaşım söz konusudur. Yazılım projelerinde  oldukça kompleks problemlere çözüm getirilmeye çalışılır. Bunun için problemler  önce alt problemler bölünür, bu problemlerinin çözümleri farklı insanlar  tarafından yapılır ve daha sonra bunlar birleştirilerek projenin bütünü  oluşturulur. Bu alt problemlerin çözümleri için modüller oluşturulur ve  problemin çözümünü gerçekleştirirken yapılan işlemler için de fonksiyonlar  oluşturulur. Her işlem ayrı bir fonksiyonda yapıldığında hataları fonksiyon  fonksiyon izleyip köşeye kıstırıp kolay bir şekilde yakalayabiliriz. Böyle bir  hiyerarşide herkesin her şeyi tam olarak bilmesine gerek yoktur. Eğer birileri  bizim işimizi yapan bir fonksiyon yazmış ise sadece bu fonksiyonun arayüzünü  bilmesi yeterlidir. Fonksiyonun iç yapısının bizim açımızdan önemi yoktur. <br />
+                  Yazılım  projelerinde benzer işler farklı yerlerde defalarca yapılır. Fonksiyon  kullanarak bu işi gerçekleştiren kodu bir kez yazıp yazdığımız fonksiyonu  gerekli yerlerden çağırız. Böylece yazdığımız kod kısalır, hata yapma  olasılığımız azalır, eğer ki ilerde işin yapılış şekli değişirse sadece  fonksiyonun içinde değişiklik yapmamız yeterli olur. <br />
+                  Eğer  bir işlemi farklı yerlerde tekrar tekrar tekrar&nbsp; yapılıyorsa bu işlem  bloğunu fonksiyona çevirmek ve gerekli yerlerde bu fonksiyona çağrılarda  bulunmak kodumuzun kalitesini ve okuna bilirliğini arttıracak, bakımını  kolaylaştıracaktır.</p>
+                <p><strong>Fonksiyonlarda Geri Değer Döndürülmesi</strong></p>
+                <p>Genelde  foksiyonlar yaptıkları işin sonucu hakkında bir değer döndürürler. Fonksiyon  tanımlamasında aksi belirtilmediği sürece fonksiyonların int tipinde değer  döndürdükleri kabul edilir. Eğer fonksiyonumuzun farklı tipte bir değer  döndürmesini &nbsp; veya değer döndürmesini istiyorsak fonksiyon tanımlamasında  özel olarak bunu belirtmemiz gerekmektedir. <br />
+                  Şimdiye  kadar fonksiyonların değer döndürebildiklerinden ve bu değerin tipin belirlene  bileceğinden bahsettik Fakat bunun nasıl yapılacağına değinmedik. Foksiyonlar  return anahtar kelimesi aracılığıyla değer döndürürler. Program akışı sırasında  return anahtar kelimesine ulaşıldığında&nbsp; bu anahtar kelimeden sonra gelen  değer veya ifadenin değeri geri döndürülerek&nbsp; foksiyondan çıkılır. <br />
+                  Örneğin  bir sayının karesini alan bir fonksiyon yazalım <br />
+                  KaresiniAl(int  sayi) <br />
+                  { <br />
+  &nbsp;  return (sayi *sayi); <br />
+                  } <br />
+  &nbsp;Fonksiyon  parametre olarak &nbsp; int tipinde bir değer alır. Fonksiyonun içini  incelediğimizde sadece return anahtar kelimesinin bulunduğu matematiksel bir  ifadeden oluştuğunu&nbsp; görürüz. Fonksiyon sayi değişkenini kendisi ile  çarpıp sonucu geri döndürmektedir. Bu fonsiyonu programızda&nbsp; <br />
+                  int  karesi = KaresiniAl(5); <br />
+                  şeklinde  kullanacağız. <br />
+            Yukarıda  belirtiğimiz gibi aksi belirtilmediği sürece her fonksiyon integer değer  döndürdüğünden ne tür değer döndüreceği belirtilmemiştir. </p>
+                <p>#include  &lt;stdio.h&gt;</p>
+                <p>#include  &lt;iostream.h&gt;</p>
+                <p>main()</p>
+                <p>{</p>
+                <p>double  toplam = 0;</p>
+                <p>double  sonuc = 1.0;</p>
+                <p>&nbsp;for  (int i = 0; i &gt; 3; i++)</p>
+                <p>&nbsp;sonuc  = sonuc * 5;<br />
+                  <br />
+                  toplam = toplam + sonuc;</p>
+                <p> sonuc = 1.0;</p>
+                <p>&nbsp;&nbsp;for  (i = 0; i  &gt; 6; i++)</p>
+                <p>&nbsp;&nbsp;sonuc  = sonuc * 8;</p>
+                <p>&nbsp;&nbsp;toplam  = toplam + sonuc;</p>
+                <p>&nbsp;&nbsp;&nbsp;<br />
+  &nbsp;&nbsp;sonuc  = 1.0;</p>
+                <p>&nbsp;&nbsp;for  (i = 0; i  &gt; 5; i++)</p>
+                <p>&nbsp;&nbsp;sonuc  = sonuc * 4;</p>
+                <p>&nbsp;&nbsp;toplam  = toplam + sonuc;</p>
+                <p>&nbsp;&nbsp;cout  &gt; &gt; &quot;5^3 + 8^6 + 4^5 = &quot;   &gt;&gt; toplam;</p>
+                <p> }</p>
+                <p>Yukarıdaki  örnek program 5^3 + 8^6 + 4^5 5&nbsp; ifadesinin değerini hesaplayan basit bir  programdır. Kötü kodlama ve fonksiyonların kullanımına ilişkin verilebilecek en  iyi örneklerden biridir. Programda üç ayrı yerde kuvvet bulma işlemi yapılıyor.  Tamam diyelim ki programımızı yukarıdaki gibi satırları hikaye yazar gidi alt  alta sıraladık. Sonuçta yapması gereken iş yapmıyor mu sanki. Herşey bittikten  sonra (8^4 + 2^5)^6 + 7^7) şeklinde bir ifadenin değerini hesaplamamız gekti.  Hadi bakalım. Şimdi ne yapacağız.&nbsp; Verilen ifadeyi hesaplamaki için kodda  değişiklik yapmaka için harcanacak çaba programı yeniden yazmakla eşdeğer. Yeni  yazacağımız kod yukarıdakinden daha karmaşık olacaktır. <br />
+                  Eğer  yukarıdki programı kuvvet alan genel amaçlı bir fonksiyon geliştirerek yapasaydık  nasıl olurdu? Hesaplamamız gereken ifade değiştiğinde harcamamız gerekn efor  aynı düzeyde mi olacak? <br />
+                  Aşağıda  aynı programın fonksiyon kullanarak gerçekleştirilmiş bir kopyası  bulunmaktadır. Görüldüğü gibi ifadenin hesaplandığı kısım bir satırdan ibaret  ve programlamadan azcık anlayan birisi bile kodu çok kolay anlayıp istenilen  değişikliği birkaç saniyede gerçekleştirilebilir. <br />
+                  Yorumu  size bırakıyorum... </p>
+                <p>#include  &lt;stdio.h&gt;</p>
+                <p>#include  &lt;iostream.h&gt;</p>
+                <p>double  Kuvvet(double sayi, int us )</p>
+                <p>{</p>
+                <p>double  sonuc = 1.0;</p>
+                <p>&nbsp;for  (int i = 0; i &gt; us; i++)</p>
+                <p>&nbsp;sonuc  = sonuc * sayi;</p>
+                <p>&nbsp;return  sonuc;</p>
+                <p> }<br />
+                  main()<br />
+                  {<br />
+                  cout&gt;&gt; &quot;5^3 + 8^6 + 4^5 = &quot;  &gt;&gt; (Kuvvet(5.0,3) + Kuvvet(8.0, 6) + Kuvvet(4.0, 5)));</p>
+                <p> }</p>
+                <p>Eğer  fonksiyonumuz bir değer geri döndürmüyecek ise&nbsp; bunu nasil ifade edeceğiz?  Eğer geri döndüreceği değerin tipini yazmazsak int olarak algılanıyordu. O  zaman geri değer döndürmemeyi nasıl ifade edeceğiz. <br />
+                  Burada  imdadımıza void tipi yetişiyor. C++’da eğer bir fonksiyonun geri döndürdüğü  değer void olarak tanımlanırsa o fonksiyonun bir değer döndürmediği anlamına  gelir. </p>
+                <p>Void  EkranıHazırla (int sol, int ust, sag, int alt) </p>
+                <p>{</p>
+                <p>clrscr();</p>
+                <p>CerceveCiz(Sol,  ust, sag, alt); </p>
+                <p>}</p>
+            <p>Yukarıdaki  fonksiyon ekranı temizleyip belirtiğimiz ekran bölgesine çerçeve çiziyor. İşlem  sonucunda bir değer de döndürmüyor. <br />
+                  Eğer  değer döndürmesi gereken bir fonksiyon kodunda bir değer döndürülmüyor ise  derleyici derleme işlemi sonunda uyarı mesajları verir. Böyle bir fonksiyonun  geri döndürdüğü değer tanımsızdır. <br />
+                  Eğer  fonksiyonumuzdan birden çok değerı nasil geri döndürebiliriz ? Bu sorunun  cevabının konunun ileryen bölümlerinde vereceğiz.</p>
+                <p><strong>Fonksiyonlarda Prototiplerin Kullanılması </strong></p>
+                <p><strong>Fonksiyon prototype’ı nedir ? </strong></p>
+                <p>&nbsp;</p>
+            <p>Fonksiyon  prototype’ı fonksiyonun aldığı parametrelerin tiplerini, sırasını, sayısını ve  fonksiyonun geri döndürdüğü değerin tipini tanımlar. Fonksiyon prototiplerinin  kullanımı C’de zorunlu değildi. Fakat C++’da bir zorunluluk haline gelmiştir.  Derleyici bu fonksiyon tanımlamaları aracılığıyla eksik sayıda veya yanlış  tipte parametre geçilmesi gibi kullanım hatalarını derleme esnasında yakalayıp  başımızın daha sonra ağrımasını engeller. <br />
+                  Fonksiyon  tanımlamasının fonksiyon kullanılmadan önce yapılmış olması gerekmektedir.  Bunun için genellikle fonksiyon tanımlamaları header dosyalarında tutulur ve  fonksiyonun kullanılacağı dosyalara bu header dosyası include yönlediricisi ile  eklenir <br />
+                  #include  &lt;header_dosya_ismi.h&gt; veya <br />
+                  #include  &quot;header_dosya_ismi.h&quot; Fonksiyon tanımları aynı zamanda fonsiyonu  kullanacak programcılara fonksiyonun kullanım şekli hakkında da bilgi verir. <br />
+                  karesiniAl(int  sayi); <br />
+                  veya <br />
+                  karesiniAl(int); <br />
+                  Yukarıda  daha önceki örneklerimizde kullandığımız KaresiniAl fonksiyonun tanımlaması  verilmektedir. Fonksiyon tanımlaması iki şekilde yapılabilmektedir.  Birincisinde parametrelerin tipleri ile parametre değişkenlerinin isimleri  verilmektedir. İkincisinde ise sadece parametrenin tipi belirtilmektedir. Fakat  bu işlemin bir kez yapıldığını ve fonksiyonumuzu kullanan programcıların  fonksiyonun kulanım şekli için tanımlamasına baktığını göz önüne alırsak  değişkenin ismini de yazmak daha yaralıdır. </p>
+                <p><strong>Bazı fonksiyon tanımlama örnekleri </strong></p>
+                <p>#include  &lt;kare.h&gt; ifadesi kullanıldığında derleyici bu başlık dosyasını include  eden kaynak kodu dosyasının bulunduğu dizinde ve projede belirtilen include  dizinlerinde arar #include &quot;kare.h&quot; ise kaynak kodunun bulunduğu  dizinde arar. <br />
+                  int  f(); /* C’de bu tanımlama int değer döndüren ve parametreleri hakkında bilgi  içermeyen bir fonksiyon tanımlaması olarak anlaşılır.*/ <br />
+                  int  f(); /* C++’da bu tanımlama int değer döndüren ve parametre almayan bir  fonksiyon tanımlaması olarak anlaşılır.*/ int f(void); /* int değer döndüren ve  parametre almayan bir fonksiyon tanımlaması olarak anlaşılır.*/ <br />
+                  int  f(int, double); /* int değer döndüren ve birincisi int ikincisi double olmak  üzere ikitane parametre alan bir fonksiyon olarak anlaşılır.*/ <br />
+            int  f(int a, double b); /* int değer döndüren ve a isiminde int, b isiminde double  olmak üzere ikitane parametre alan bir fonksiyon olarak anlaşılır.*/</p>
+                <p><strong>Fonksiyonlarda Scope Kuralları </strong></p>
+                <p>&nbsp;</p>
+                <p>Fonksiyon  içinde tanımlanan tüm değişkenler yereldir. Sadece fonksiyon içinde geçerliliğe  sahiptir. Parametreler de yerel değişkenlerdir. Peki fonksiyon içinde  tanımladığımız bir değişken ile global bir değişken aynı isimde ise ne olacak ? <br />
+  &nbsp;Fonksiyon  içinde tanımlanan değişken de global değişken de aynı isimde, biz bu değişken  üzerinde işlem yaptığımızda hangi değişken etkilenecek veya hangi değişkendeki  bilgiye ulaşacağız? <br />
+                  Fonksiyon  içinde yerel değişken global değişkeni örter yani aşağıdaki programda görüldüğü  fonksiyon içinde yerel değişkenin değerini kontrol ettiğimizde global  değişkenden farklı olduğunu görürüz <br />
+                  #include  &lt;iostream.h&gt; <br />
+                  void  f(int i ); <br />
+                  int  i =5; <br />
+                  void  f(int i) <br />
+                  { <br />
+                  cout  &lt;&lt; &quot;Foksiyon içinde i =&quot;&lt;&lt; i&lt;&lt; endl; <br />
+                  cout  &lt;&lt; &quot;Foksiyon içinde Global i =&quot;&lt;&lt; ::i&lt;&lt; endl; </p>
+                <p>} <br />
+                  main() <br />
+                  { <br />
+                  f(8); <br />
+                  cout  &lt;&lt; &quot;Foknsiyon dışında i = &quot;&lt;&lt; i&lt;&lt; endl; <br />
+                  return  0; <br />
+                  } </p>
+                <p>Foksiyon  içinde i =8 <br />
+                  Fonksiyon  içinde Global i =5 <br />
+                  Foknsiyon  dışında i = 5 </p>
+                <p>Yukarıdaki  örneğin ekran çıktısında da görüldüğü gibi scope operatörü kullanılarak global  değişkene ulaşabiliriz. </p>
+            <p>Global  değişkenler ile aynı isimde yerel değişkenler tanımlamaya özen gösterin.</p>
+                <p><strong>Değer İle Çağırma </strong></p>
+                <p>Bu  çağırma şeklinde fonksiyon parametre değerleri yerel değişkenlere kopyalanır.  Fonksiyon hiç bir şekilde kendisine parametre olarak geçilen değişkenleri  değiştiremez. Parametre değişkenleri üzerinde yaptığı değişiklikler yerel  değişkenlerin üzerinde gerçekleşir ve fonksiyondan çıkılırken bu değişkenler de  yok edildiğinden kaybolur. Bu yöntemin dez avantajı büyük yapıların parametre  olarak geçilmesi durumunda kopyalama işleminin getirdiği maliyet oldukça yüksek  olur. Fakat bu yöntem sayesinde fonksiyonun içinde yanlışılıkla kendisine  geçilen parametrelerin değerlerinin değiştirilmemesi garantilenmiş olur. </p>
+                <p>#include  &lt;stdio.h&gt;</p>
+                <p>#include  &lt;iostream.h&gt;</p>
+                <p>double  Kuvvet(double sayi, int us )</p>
+                <p>{</p>
+                <p>&nbsp;double  sonuc = 1.0;</p>
+                <p>&nbsp;for  (; us &gt; 0; us--)</p>
+                <p>&nbsp;&nbsp;sonuc  = sonuc * sayi;</p>
+                <p>&nbsp;&nbsp;return  sonuc;</p>
+                <p> }</p>
+                <p> main()</p>
+                <p> {</p>
+                <p>&nbsp;&nbsp;double  x;</p>
+                <p>&nbsp;  int y;</p>
+                <p>&nbsp;&nbsp;cout&lt;&lt;&quot;(x^y)^y  ifadesini hesaplamak için x, ve y de?erlerini sysasy ile giriniz.&quot;  &lt;&lt; endl;</p>
+                <p>&nbsp;&nbsp;cout  &lt;&lt;&quot; ? x =&quot;;</p>
+                <p>&nbsp;&nbsp;cin  &gt;&gt;x;</p>
+                <p>&nbsp;&nbsp;cout  &lt;&lt;&quot; ? y =&quot;;</p>
+                <p>&nbsp;&nbsp;cin  &amp;ft&gt;y;</p>
+                <p>&nbsp;&nbsp;cout&lt;&lt;  &quot;(&quot;&lt;&lt; x &lt;&lt;&quot;^&quot;&lt;&lt; y &lt;&lt;  &quot;)^&quot;&lt;&lt; y &lt;&lt;&quot; =&quot;&lt;&lt; (Kuvvet(Kuvvet(x,y),  y)) &lt;&lt; endl;</p>
+                <p> }</p>
+                <p>Yukarıdaki  örnek programda Kuvvet Kuvvet fonksiyonun parametreleri değer ile geçiliyor..  Her bir parametre için yerel bir değişken yaratılmış ve parametre  değerleri&nbsp;&nbsp; bu &nbsp; yerel değişkenlere kopyalanmıştır.. Dolayısıyla  us değişkeni üzerinde yaptığımız değişiklikler programın işleyişinde aksaklığa  sebek vermemektedir. Programın çıktısı aşağıdaki gibidir. </p>
+                <p>(x^y)^y  ifadesini hesaplamak için x, ve y değerlerini sırası ile giriniz.</p>
+                <p>? x  =2</p>
+                <p>? y  =3</p>
+                <p>(2^3)^3  =512</p>
+                <p>&nbsp;</p>
+                <p>Şimdi  program üzerinde ufak bir değişiklik yapalım. us us parametresini değer ile  değil de referans ile geçelim bakalım program aynı veriler için nasıl bir  davranışta bulunacak. Aşağıda us parametresinin referans ile geçilmiş olduğu  program kodu ve&nbsp; aynı değerler için çalışmasının sonucu ekran çıktısı olarak  aşağıda verilmiştir. <br />
+                  Ekran  çıktısında da görüldüğü gibi program düzgün çalışmamaktadır. Çünkü Kuvvet  Kuvvet fonksiyonu kendisine yolladığımız us us değişkenini değiştirmiştir.  Fonksiyon us us parametresi için geçilen değişkenin referansını parametre olarak  aldığından us us değişkeni için yerel olarak oluşturulan değişken orjinal  değeri gösterir. <br />
+                  Kodu  dikkatle incelersek. Kuvvet fonksiyonu iki kez ard arda çağrılıyor. Birinci  çağırılışında us parameteresi olarak geçilen y değişkenin değeri fonksiyon  içinde değiştiriliyor ve 0 yapılıyor. Fonksiyon birinci çağırılışında düzgün  çalışıyor. Fakat ikinci çağırılışında us olarak 0 değeri geçildiğinden sonuç 1  olarak bulunuyor. <br />
+                  Yazdırma  işlemini de hesaplamalardan sonra yaptırdığımız için ekrana (2^3)^0  yerine&nbsp; (2^0)^0 yazıyor. </p>
+                <p>#include  &lt;stdio.h&gt;</p>
+                <p>#include  &lt;iostream.h&gt;</p>
+                <p>double  Kuvvet(double sayi, int &amp;us )</p>
+                <p>{</p>
+                <p>double  sonuc = 1.0;</p>
+                <p>for  (; us &gt; 0; us--)</p>
+                <p>sonuc  = sonuc * sayi;</p>
+                <p> return sonuc;</p>
+                <p> }</p>
+                <p> main()</p>
+                <p> {</p>
+                <p>&nbsp;&nbsp;double  x;</p>
+                <p>&nbsp;&nbsp;int  y;</p>
+                <p>&nbsp;  cout&lt;&lt;&quot;(x^y)^y ifadesini hesaplamak için x, ve y değerlerini sırası  ile giriniz.&quot; &lt;&lt; endl;</p>
+                <p>&nbsp;&nbsp;cout  &lt;&lt;&quot; ? x =&quot;;</p>
+                <p>&nbsp;&nbsp;&nbsp;cin  &gt;&gt;x;</p>
+                <p>&nbsp;&nbsp;&nbsp;cout  &lt;&lt;&quot; ? y =&quot;;</p>
+                <p>&nbsp;&nbsp;&nbsp;cin  &gt;&gt;y;</p>
+                <p>&nbsp;&nbsp;&nbsp;cout&lt;&lt;  &quot;(&quot;&lt;&lt; x &lt;&lt;&quot;^&quot;&lt;&lt; y &lt;&lt;  &quot;)^&quot;&lt;&lt; y &lt;&lt;&quot; =&quot;&lt;&lt; (Kuvvet(Kuvvet(x,y),  y)) &lt;&lt; endl;</p>
+                <p>  } </p>
+                <p>  (x^y)^y ifadesini hesaplamak için x, ve y  değerlerini sırası ile giriniz.</p>
+                <p>  ? x =2</p>
+                <p>  ? y =3</p>
+                <p>  (2^0)^0 =1</p>
+                <p>&nbsp;</p>
+                <p>Çok  büyük boyuttaki yapıları değer ile geçmek performansı düşürür. </p>
+            <p>Fonksiyona  değere ile paramete geçildiğinde parametre değeri yerel bir değişkene kopyalanır.  Yapılan değişiklikler yerel değişken üzerindedir. Fonksiyondan çıkınca  kaybolur.</p>
+                <p><strong>Referans İle Çağırma </strong></p>
+                <p>&nbsp;&nbsp;&nbsp;<br />
+  &nbsp;Bu  çağırma şeklinde ise fonksiyona parametre olarak geçilen değerler yerine bu  değerleri içeren değişkenlerin referansları (veya adresleri) geçilir. Böylece  fonksiyon içinden parametre değişkenleri aracılığıyla dışarıdaki değişkenlerin  değerlerini de değiştirebiliriz. Fonksiyonların parametrelerinin referans ile  geçilmesi suretiyle performans arttırılabilir. Dikkati kullanılmaz ise fonksiyon  içerisinde parametre değişkenlerinin değerleri değişmemesi gerektiği halde  yanlışlıkla değiştirilebilir. <br />
+            Referans  ile çağırmak iyidir, değer ile çağırmak kötüdür diye bir genelleme yapmak  mümkün değildir. Her iki tekniğinde artı ve eksileri vardir. </p>
+                <p>#include  &lt;stdio.h&gt;</p>
+                <p>#include  &lt;iostream.h&gt;</p>
+                <p> struct Ogrenci{</p>
+                <p> char Ad[20];</p>
+                <p>&nbsp;&nbsp;char  Soyad[20];</p>
+                <p>&nbsp;&nbsp;char  OkulNo[20];</p>
+                <p>&nbsp;&nbsp;char  Adres[255];</p>
+                <p> char KayitTarihi[11];<br />
+                  };</p>
+                <p> void EkranaYaz(Ogrenci &amp;ogr)</p>
+                <p>{</p>
+                <p>&nbsp;cout&lt;&lt;&quot;Ad:&quot;&lt;&lt;ogr.Ad&lt;&lt;endl;</p>
+                <p>&nbsp;cout&lt;&lt;&quot;Soyad:&quot;&lt;&lt;ogr.Soyad&lt;&lt;endl;</p>
+                <p>&nbsp;cout&lt;&lt;&quot;OkulNo:&quot;&lt;&lt;ogr.OkulNo&lt;&lt;endl;</p>
+                <p> cout&lt;&lt;&quot;Adres:&quot;&lt;&lt;ogr.Adres&lt;&lt;endl;</p>
+                <p>&nbsp;&nbsp;cout&lt;&lt;&quot;KayitTarihi&quot;&lt;&lt;ogr.KayitTarihi&lt;&lt;endl;</p>
+                <p> }</p>
+                <p> void Oku(Ogrenci &amp;ogr)</p>
+                <p>{</p>
+                <p>&nbsp;cout&lt;&lt;&quot;Ad:&quot;;</p>
+                <p> cin&gt;&gt;ogr.Ad;</p>
+                <p>&nbsp;&nbsp;cout&lt;&lt;&quot;Soyad:&quot;;</p>
+                <p>&nbsp;&nbsp;cin&gt;&gt;ogr.Soyad; </p>
+                <p>&nbsp;&nbsp;cout&lt;&lt;&quot;OkulNo:&quot;;</p>
+                <p>&nbsp;&nbsp;cin&gt;&gt;ogr.OkulNo;</p>
+                <p>&nbsp;&nbsp;cout&lt;&lt;&quot;Adres:&quot;;</p>
+                <p>&nbsp;&nbsp;cin&gt;&gt;ogr.Adres;</p>
+                <p>&nbsp;&nbsp;cout&lt;&lt;&quot;KayitTarihi&quot;;</p>
+                <p>&nbsp;&nbsp;cin&gt;&gt;ogr.KayitTarihi;</p>
+                <p> }</p>
+                <p> void main()</p>
+                <p> {</p>
+                <p>&nbsp;Ogrenci  temp;</p>
+                <p>&nbsp;Oku(temp);</p>
+                <p>&nbsp;cout  &lt;&lt;&quot;Kullanycını girdiği bilgiler&quot;&lt;&lt;endl;</p>
+                <p> EkranaYaz(temp);</p>
+                <p> }</p>
+            <p>Gerekmedikçe&nbsp;  parametre değişkenlerinin değerlerini değiştirmeyin. Bir değişkenden tassaruf  etmek için parametre değişkenini kulanmak başımızı ağrıtacak yan etkilere yol  açabilir.</p>
+                <p><strong>Elipssis Operatörü Ile Degisken Sayida Parametre Geçilmesi </strong></p>
+                <p>C  dilinde degisken sayida ve/veya tipte parametre geçilmesi için ellipsis  operatörü kullanilir. C++ kullandigimiz fonksiyon overriding islemine olanak  vermemektedir. Ellipsis operatorü ,... seklinde tanimlanir. <br />
+  &nbsp;Ellipsis  operatörü ekstra parametreler olabilecegini gösterir fakat olasi parametreler  hakkinda bilgi vermez. Elipsis operatöründen önce en az bir parametre bulunmasi  gerekmektedir. Bu parametre araciligiyla fonksiyona geçilen parametreler  hakkinda bilgi edinilir. Elipsis operatörü degisken sayida parametereyi ifade  ettiginden dolayi parametre listesindeki son token olmalidir. <br />
+                  Degisken  sayidaki parametreleri açiga çikarmak için &nbsp; Stdargs.h veya Varargs.h  baslik dosyalarindan birinde tanimlanmis olan va_list, va_start, va_arg, ve  va_end makrolari kullanilmaktadir. <br />
+                  va_list  &nbsp;&nbsp;&nbsp;va_start, va_arg, va_end makrolari tarafindan gerek duyulan  bilgileri tutmak için tanimlanmis bir tiptir.Degisken uzunluktaki parametre  listesinde bulunan paremetrelere erismek için va_list tipinde bir nesne  tanimlanmasi gerekmektedir. <br />
+                  va_start  &nbsp;&nbsp;&nbsp;Parametre listesine erisilmeden önce çagirilmasi gereken bir  makrodur. va_arg, va_end makrolarinda kullanilmak üzere va_list ile tanimlanan  nesneyi hazirlar. <br />
+                  va <br />
+                  va_arg  &nbsp;&nbsp;&nbsp;Parametere listesindeki parametreleri açiga çikaran  makroduir. Her çagrilisinda va_arg möakrosu la_list ile tanimlana nesneyi  listedeki bir sonraki parametreyi göstereceksekilde degistirir. Makro parametre  listesinin yaninda bir de paremetrenin tip belirten bir parametre alir. <br />
+                  va_end  &nbsp;&nbsp;&nbsp;va_list ile belirtilen parametre listesine sahip fonksiyondan  normal dönüs islemini gerçeklestiren makrodur., <br />
+  &nbsp;Asagida  ellipsis operatörünün kullanimi ait br örnek program verilmistir. Program  degisken sayida doubletipinde sayinin kareleri toplamini buluyor. Fonksiyonun  ilk parametresi parametre sayisini içeriyor.<br />
+            #include  &lt;iostream.h&gt;</p>
+                <p>#include  &lt;math.h&gt;</p>
+                <p>#include  &lt;stdarg.h&gt;</p>
+                <p>double  KareToplam(int, ...);</p>
+                <p>void  main(int argc, char *argval[],char *env[])</p>
+                <p>{</p>
+                <p> cout &lt;&lt; &quot;Double sayilarin  karelerinin toplamini alir&quot;;</p>
+                <p>&nbsp;cout  &lt;&lt; &quot; 10^2 + 20 ^2 + 5^2 = &quot; &lt;&lt; KareToplam(3, 10.0, 20.0,  5.0)&lt;&lt; endl;</p>
+                <p>}</p>
+                <p>double  KareToplam(int sayi, ...)</p>
+                <p>{</p>
+                <p>&nbsp;va_list  parametreListesi;</p>
+                <p>&nbsp;va_start(parametreListesi,  sayi);</p>
+                <p>&nbsp;double  toplam = 0.0;</p>
+                <p>&nbsp;for  (int i = 0; i &lt; sayi; i++)</p>
+                <p>&nbsp;&nbsp;toplam  += pow(va_arg(parametreListesi, double), 2);</p>
+                <p>&nbsp;&nbsp;va_end(parametreListesi);</p>
+                <p>&nbsp;  return toplam;</p>
+                <p> }</p>
+                <p><strong>main() Foksiyonun Parametreleri ve  Kullanımı</strong></p>
+                <p>Main  fonksiyonu program çalışmaya başladığında çalıştırılan fonksiyondur. Bu  fonksiyon üç parametre alır. Bu parametrelerin kullanılması zorunlu değildir. <br />
+                  Şimdi  bu sırası ile bu parametrelerin kullanım anlamlarına amaçlarına değinelim. <br />
+                  Bir  çok program, komut satırı parametrelerini aktif bir şekilde kullanır. Mesala  sıkıştırma programları sıkıştırılacak dosyaların isimleri, sıkıştırma  işleminden sonra oluşturulacak dosya isimi, sıkıştırma şekli gibi bilgileri  komut satırı parametreleri arcılığıyla kullanıcıdan alırlar. Main fonksiyonun  ilk iki parametresi komutsatırı parametrelerinin işlenmesi için kullanılır. Üçüncü  parametre ise ortam değişkenlerinin (environment variables) değerlerini içerir. </p>
+                <p>main(  int argc, char* argv[], char *env[])</p>
+                <p>{</p>
+                <p>&nbsp;</p>
+                <p>}</p>
+                <p>main  fonksiyonun genel tanımlaması yukarıdaki gibidir. İlk parametre komut  satırından geçilen parametrelerin sayısını tutar. Programın ismi de bir komut  satırı parametresi olarak kabul edilir yani her program en az bir komut satırı  parametresi içerir. argc parameteresinin değeri en az bir olur. argv  parametresi ise boyutu bilinmeyen stringler dizisidir. Bu parametrenin her bir  elemanı bir komut satır parametresinin başlangıç adresini tutar. argc ve argv  parametreleri birlikte bir anlama kazanırlar. <br />
+                  env  parametresinde ise PATH, TEMP gibi ortam değişkenlerinin değerleri tutulur. env  parametresi de uzunluğu bilinmeyen bir string dizisidir. Fakat dikkat edilirse  env env parametresi için komutsatırı parametrelerinde olduğu gibi kaç adet  ortam değişkeni olduğunu gösteren bir parametre yoktur. Bunun yerine env  dizisinin son elemanı NULL değerini içerir. </p>
+                <p>#include  &lt;iostream.h&gt;</p>
+                <p>main(int  argc, char *argval[],char *env[])</p>
+                <p>{</p>
+                <p>&nbsp;int  i = 0;</p>
+                <p>&nbsp;while  (env[i])</p>
+                <p>&nbsp;{</p>
+                <p>&nbsp;&nbsp;cout  &lt;&lt; env[i++]&lt;&lt;endl;</p>
+                <p>&nbsp;&nbsp;}</p>
+                <p>  } </p>
+                <p>TMP=C:\WINDOWS\TEMP</p>
+                <p>TEMP=C:\WINDOWS\TEMP</p>
+                <p>PROMPT=$p$g</p>
+                <p>winbootdir=C:\WINDOWS</p>
+                <p>COMSPEC=C:\WINDOWS\COMMAND.COM</p>
+                <p>CMDLINE=WIN</p>
+                <p>windir=C:\WINDOWS</p>
+                <p>BLASTER=A220  I5 D3</p>
+                <p>PATH=C:\Program  Files\DevStudio\SharedIDE\BIN\;C:\WINDOWS;C:\WINDOWS\COMMAND;C:\</p>
+                <p>PROGRA~1\BORLAND\CBUILD~1\BIN</p>
+                <p>_MSDEV_BLD_ENV_=1</p>
+                <p>&nbsp;</p>
+                <p>Yukarıda  ortam parametrelerini listeliyen bir örnek program ve ekran çıktısı  verilmiştir. Programda ortam parametrelerinden sonra gelen dizi elemanın NULL  olduğu bilgisinden yararlanılmıştır. </p>
+<p>&nbsp;</p></font>
+<p class="additional"></p> 
+      </div>
+    </div>
+    <!-- end main -->
+    <!-- footer -->
+    <div id="footer">
+    <div id="left_footer"> <b>C++</b></div>
+    <div id="right_footer">
+
+<!-- Please do not change or delete this link. Read the license! Thanks. :-) -->
+Design by <a href="http://neozdemir.blogspot.com.tr/" title="Website Design"><strong>Neslihan Özdemir</strong></a>
+
+    </div>
+</div>
+    <!-- end footer -->
+</body>
+</html>
